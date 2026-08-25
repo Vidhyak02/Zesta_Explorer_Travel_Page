@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <section>
+
+        <!--Nav Bar-->
+        <nav class="bg-white fixed shadow-lg w-full z-50">
+            <div class="max-w-6xl flex items-center justify-between">
+                <img src="image/zestlogo.png" class="h-15 w-20 mx-10 my-5">
+                <!-- Desktop Nav Links (hidden on mobile) -->
+                <div class="hidden md:flex space-x-10 text-gray-600 font-medium">
+                    <a href="index.html" class="hover:text-teal-600">HOME</a></li>
+                    <a href="about.html" class="hover:text-teal-600">ABOUT US</a></li>
+                    <div class="relative group">
+                        <a href="destination.html"
+                            class=" hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            DESTINATIONS
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="asia.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Asia</a>
+                            <a href="europe.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Europe</a>
+                            <a href="northamerica.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">North
+                                America</a>
+                            <a href="others.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Others</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="packages.html"
+                            class="hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            PACKAGES
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="family.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Family</a>
+                            <a href="honeymoon.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Honeymoon</a>
+                            <a href="budget.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Budget</a>
+                            <a href="adventure.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Adventure</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="#" class=" hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            LUXURY ESCAPES
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="#"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">7
+                                Star Hotels</a>
+                            <a href="#"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Private
+                                Island</a>
+                            <a href="#"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Luxury
+                                Cruise</a>
+                            <a href="#"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Private
+                                Helicopter</a>
+                        </div>
+
+                    </div>
+                    <a href="#" class="hover:text-teal-600">CONTACT US</a>
+                </div>
+
+                <!-- Desktop Button -->
+                <a href="#"
+                    class="absolute hidden md:block bg-teal-600 text-white px-4 py-2 right-10  rounded-lg hover:bg-teal-500">
+                    Book Now
+                </a>
+                <label for="menuToggle" class="md:hidden flex flex-col space-y-1.5 mx-10 cursor-pointer">
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                </label>
+
+            </div>
+
+            <input type="checkbox" id="menuToggle" class="hidden peer" />
+            <div class="hidden peer-checked:block md:hidden bg-white px-6 pb-4">
+                <ul class="flex flex-col space-y-3 text-gray-600 font-medium">
+                    <li><a href="index.html" class="block hover:text-teal-600">HOME</a></li>
+                    <li><a href="about.html" class="block hover:text-teal-600">ABOUT US</a></li>
+                    <li><a href="destination.html" class="block hover:text-teal-600">DESTINATIONS</a></li>
+                    <li><a href="packages.html" class="block hover:text-teal-600">PACKAGES</a></li>
+                    <li><a href="#" class="block hover:text-teal-600">LUXURY</a></li>
+                    <li><a href="#" class="block hover:text-teal-600">CONTACT US</a></li>
+                </ul>
+                <a href="#" class="mt-4 inline-block bg-teal-700 text-white px-4 py-2 rounded-lg hover:bg-teal-600">
+                    Book Now
+                </a>
+            </div>
+        </nav>
+        <!-- Packages Hero Section -->
+        <section class="relative h-screen overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1591172601559-0ec5b777992a?q=80&w=1470&auto=format&fit=crop"
+                alt="Travel Packages" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="relative z-10 flex items-center justify-center h-full">
+                <div class="max-w-4xl text-center px-6">
+                    <h1 class="mt-15 uppercase text-3xl md:text-5xl font-bold font-serif text-white leading-tight">
+                        Discover Travel Packages
+                    </h1>
+                    <p class="mt-8 text-lg md:text-xl text-gray-200 leading-8 max-w-3xl mx-auto">
+                        From romantic honeymoons and exciting family vacations to luxury escapes and budget-friendly
+                        adventures, discover travel packages designed for unforgettable memories.
+                    </p>
+                    <div class="mt-12 flex flex-wrap justify-center gap-5">
+                        <a href="#packages"
+                            class="px-8 py-4 bg-teal-600 text-white rounded-full font-semibold hover:bg-teal-700 transition duration-300">
+                            Explore Packages
+                        </a>
+                        <a href="booking.html"
+                            class="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-black transition duration-300">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Browse Packages -->
+        <section id="packages" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-14">
+                    <p class="uppercase tracking-[5px] text-teal-600 font-semibold">
+                        Browse Packages
+                    </p>
+                    <h2
+                        class="uppercase text-3xl md:text-5xl leading-tight font-semibold font-serif text-gray-900 mt-3">
+                        Choose Your <br>Perfect Travel Style
+                    </h2>
+                    <p class="mt-5 max-w-3xl mx-auto text-gray-600 leading-8">
+                        Whether you're planning a romantic escape, a family vacation, or an adventurous getaway, we have
+                        travel packages designed to match every traveler's dream.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <a href="family.html" class="group relative overflow-hidden rounded-3xl h-[420px] shadow-xl">
+                        <img src="https://plus.unsplash.com/premium_photo-1664367173144-7e854e199524?q=80&w=870&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+                        <div class="absolute flex gap-60 bottom-5 left-8">
+                            <h3 class="uppercase text-4xl font-bold font-serif text-gray-200">
+                                Family
+                            </h3>
+                            <span
+                                class="inline-block px-6 py-3 rounded-full bg-teal-600 text-white font-semibold opacity-0 group-hover:opacity-100 transition duration-300">
+                                Explore
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="honeymoon.html" class="group relative overflow-hidden rounded-3xl h-[420px] shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1513601934074-e86a49a01889?q=80&w=869&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+                        <div class="absolute flex gap-35 bottom-5 left-8">
+                            <h3 class="uppercase text-4xl font-bold font-serif text-gray-200">
+                                Honeymoon
+                            </h3>
+                            <span
+                                class="inline-block px-6 py-3 rounded-full bg-teal-600 text-white font-semibold opacity-0 group-hover:opacity-100 transition duration-300">
+                                Explore
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="budget.html" class="group relative overflow-hidden rounded-3xl h-[420px] shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=870&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+                        <div class="absolute flex gap-60 bottom-5 left-8">
+                            <h3 class="uppercase text-4xl font-bold font-serif text-gray-200">
+                                Budget
+                            </h3>
+                            <span
+                                class="inline-block px-6 py-3 rounded-full bg-teal-600 text-white font-semibold opacity-0 group-hover:opacity-100 transition duration-300">
+                                Explore
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="adventure.html" class="group relative overflow-hidden rounded-3xl h-[420px] shadow-xl">
+                        <img src="https://plus.unsplash.com/premium_photo-1661939596909-12a938c51ce8?q=80&w=893&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+                        <div class="absolute flex gap-40 bottom-5 left-8">
+                            <h3 class="uppercase text-4xl font-bold font-serif text-gray-200">
+                                Adventure
+                            </h3>
+                            <span
+                                class="inline-block px-6 py-3 rounded-full bg-teal-600 text-white font-semibold opacity-0 group-hover:opacity-100 transition duration-300">
+                                Explore
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Most Popular Tours -->
+        <section class="py-20 bg-blue-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-14">
+                    <p class="uppercase tracking-[5px] text-teal-600 font-semibold">
+                        Most Popular Tours
+                    </p>
+                    <h2 class="uppercase text-4xl md:text-5xl font-bold font-serif mt-3">
+                        Best Selling Packages
+                    </h2>
+                    <p class="mt-5 text-gray-600 max-w-2xl mx-auto">
+                        Explore our most booked travel packages, loved by thousands of travelers for unforgettable
+                        experiences and exceptional value.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Maldives -->
+                    <div
+                        class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1589779678221-a58efe659ca2?q=80&w=871&auto=format&fit=crop"
+                                alt="Maldives" class="w-full h-64 object-cover hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-2xl font-bold font-serif">Maldives</h3>
+                                <span class="text-yellow-500 font-semibold">⭐ 5.0</span>
+                            </div>
+                            <p class="mt-3 text-gray-600">5 Days • 4 Nights</p>
+                            <div class="flex justify-between items-center mt-6">
+                                <div>
+                                    <p class="text-sm text-gray-500">Starting From</p>
+                                    <h4 class="text-2xl font-bold text-teal-600">$899</h4>
+                                </div>
+                                <a href="booking.html"
+                                    class="bg-teal-600 text-white px-5 py-3 rounded-full hover:bg-teal-700 transition">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dubai -->
+                    <div
+                        class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1590273089302-ebbc53986b6e?q=80&w=458&auto=format&fit=crop"
+                                alt="Dubai" class="w-full h-64 object-cover hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-2xl font-bold font-serif">Dubai</h3>
+                                <span class="text-yellow-500 font-semibold">⭐ 4.9</span>
+                            </div>
+                            <p class="mt-3 text-gray-600">5 Days • 4 Nights</p>
+                            <div class="flex justify-between items-center mt-6">
+                                <div>
+                                    <p class="text-sm text-gray-500">Starting From</p>
+                                    <h4 class="text-2xl font-bold text-teal-600">$749</h4>
+                                </div>
+                                <a href="booking.html"
+                                    class="bg-teal-600 text-white px-5 py-3 rounded-full hover:bg-teal-700 transition">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- France -->
+                    <div
+                        class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1576088869018-91a775be4686?q=80&w=871&auto=format&fit=crop"
+                                alt="France" class="w-full h-64 object-cover hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-2xl font-bold font-serif">France</h3>
+                                <span class="text-yellow-500 font-semibold">⭐ 4.9</span>
+                            </div>
+                            <p class="mt-3 text-gray-600">7 Days • 6 Nights</p>
+                            <div class="flex justify-between items-center mt-6">
+                                <div>
+                                    <p class="text-sm text-gray-500">Starting From</p>
+                                    <h4 class="text-2xl font-bold text-teal-600">$1299</h4>
+                                </div>
+                                <a href="booking.html"
+                                    class="bg-teal-600 text-white px-5 py-3 rounded-full hover:bg-teal-700 transition">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Switzerland -->
+                    <div
+                        class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1583702581601-1c53ed990183?q=80&w=774&auto=format&fit=crop"
+                                alt="Switzerland"
+                                class="w-full h-64 object-cover hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-2xl font-bold font-serif">Switzerland</h3>
+                                <span class="text-yellow-500 font-semibold">⭐ 4.0</span>
+                            </div>
+                            <p class="mt-3 text-gray-600">7 Days • 6 Nights</p>
+                            <div class="flex justify-between items-center mt-6">
+                                <div>
+                                    <p class="text-sm text-gray-500">Starting From</p>
+                                    <h4 class="text-2xl font-bold text-teal-600">$1499</h4>
+                                </div>
+                                <a href="booking.html"
+                                    class="bg-teal-600 text-white px-5 py-3 rounded-full hover:bg-teal-700 transition">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- United States -->
+                    <div
+                        class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+                        <div class="overflow-hidden">
+                            <img src="https://plus.unsplash.com/premium_photo-1694475392038-7c2a5706786e?q=80&w=866&auto=format&fit=crop"
+                                alt="United States"
+                                class="w-full h-64 object-cover hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-2xl font-bold font-serif">United States</h3>
+                                <span class="text-yellow-500 font-semibold">⭐ 4.9</span>
+                            </div>
+                            <p class="mt-3 text-gray-600">8 Days • 7 Nights</p>
+                            <div class="flex justify-between items-center mt-6">
+                                <div>
+                                    <p class="text-sm text-gray-500">Starting From</p>
+                                    <h4 class="text-2xl font-bold text-teal-600">$1599</h4>
+                                </div>
+                                <a href="booking.html"
+                                    class="bg-teal-600 text-white px-5 py-3 rounded-full hover:bg-teal-700 transition">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canada -->
+                    <div
+                        class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1570553181537-8fdcef2f6f9f?q=80&w=774&auto=format&fit=crop"
+                                alt="Canada" class="w-full h-64 object-cover hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-2xl font-bold font-serif">Canada</h3>
+                                <span class="text-yellow-500 font-semibold">⭐ 4.8</span>
+                            </div>
+                            <p class="mt-3 text-gray-600">6 Days • 5 Nights</p>
+                            <div class="flex justify-between items-center mt-6">
+                                <div>
+                                    <p class="text-sm text-gray-500">Starting From</p>
+                                    <h4 class="text-2xl font-bold text-teal-600">$1199</h4>
+                                </div>
+                                <a href="booking.html"
+                                    class="bg-teal-600 text-white px-5 py-3 rounded-full hover:bg-teal-700 transition">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- New Zealand -->
+                    <div
+                        class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1720009223236-41cc884f6082?q=80&w=774&auto=format&fit=crop"
+                                alt="New Zealand"
+                                class="w-full h-64 object-cover hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-2xl font-bold font-serif">New Zealand</h3>
+                                <span class="text-yellow-500 font-semibold">⭐ 4.9</span>
+                            </div>
+                            <p class="mt-3 text-gray-600">7 Days • 6 Nights</p>
+                            <div class="flex justify-between items-center mt-6">
+                                <div>
+                                    <p class="text-sm text-gray-500">Starting From</p>
+                                    <h4 class="text-2xl font-bold text-teal-600">$1399</h4>
+                                </div>
+                                <a href="booking.html"
+                                    class="bg-teal-600 text-white px-5 py-3 rounded-full hover:bg-teal-700 transition">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- South Africa -->
+                    <div
+                        class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+                        <div class="overflow-hidden">
+                            <img src="https://plus.unsplash.com/premium_photo-1782900461521-fad5d3a6aed7?q=80&w=868&auto=format&fit=crop"
+                                alt="South Africa"
+                                class="w-full h-64 object-cover hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-2xl font-bold font-serif">South Africa</h3>
+                                <span class="text-yellow-500 font-semibold">⭐ 4.8</span>
+                            </div>
+                            <p class="mt-3 text-gray-600">6 Days • 5 Nights</p>
+                            <div class="flex justify-between items-center mt-6">
+                                <div>
+                                    <p class="text-sm text-gray-500">Starting From</p>
+                                    <h4 class="text-2xl font-bold text-teal-600">$999</h4>
+                                </div>
+                                <a href="booking.html"
+                                    class="bg-teal-600 text-white px-5 py-3 rounded-full hover:bg-teal-700 transition">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Greece -->
+                    <div
+                        class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1738069138588-6e6d67a5c697?q=80&w=870&auto=format&fit=crop"
+                                class="w-full h-64 object-cover hover:scale-110 transition duration-700">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-2xl font-bold font-serif">Greece</h3>
+                                <span class="text-yellow-500 font-semibold">⭐ 4.9</span>
+                            </div>
+                            <p class="mt-3 text-gray-600">6 Days • 5 Nights</p>
+                            <div class="flex justify-between items-center mt-6">
+                                <div>
+                                    <p class="text-sm text-gray-500">Starting From</p>
+                                    <h4 class="text-2xl font-bold text-teal-600">$949</h4>
+                                </div>
+                                <a href="booking.html"
+                                    class="bg-teal-600 text-white px-5 py-3 rounded-full hover:bg-teal-700 transition">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- What's Included -->
+        <section class="py-20 bg-[#F8FAF9]">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-14">
+                    <p class="uppercase tracking-[6px] text-teal-600 font-semibold">
+                        What's Included
+                    </p>
+                    <h2 class="mt-4 text-3xl md:text-4xl font-bold font-serif text-gray-900 leading-tight">
+                        Everything For A <span class="text-teal-600">Seamless Journey</span>
+                    </h2>
+                    <p class="mt-6 text-gray-600 leading-8">
+                        Every Zesta Explorer package is thoughtfully planned with essential services to make your
+                        journey <br>comfortable, convenient, and completely stress-free.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-7">
+
+                    <!-- Travel -->
+                    <div
+                        class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=80"
+                                class="w-full h-48 object-cover">
+                            <div
+                                class="absolute -bottom-7 left-6 w-14 h-14 rounded-full bg-teal-600 border-4 border-white flex items-center justify-center text-white text-2xl">
+                                ✈️
+                            </div>
+                        </div>
+                        <div class="p-6 pt-10">
+                            <h3 class="text-2xl font-bold font-serif text-slate-900">Travel</h3>
+                            <p class="text-teal-600 text-sm font-medium mt-1">Flights & Transfers</p>
+                            <ul class="mt-5 space-y-3 text-gray-600 text-sm">
+                                <li class="flex gap-2"><span class="text-teal-600">✔</span>Comfortable flight
+                                    arrangements</li>
+                                <li class="flex gap-2"><span class="text-teal-600">✔</span>Airport pickup & local
+                                    transfers</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Stay -->
+                    <div
+                        class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80"
+                                class="w-full h-48 object-cover">
+                            <div
+                                class="absolute -bottom-7 left-6 w-14 h-14 rounded-full bg-teal-600 border-4 border-white flex items-center justify-center text-white text-2xl">
+                                🏨
+                            </div>
+                        </div>
+                        <div class="p-6 pt-10">
+                            <h3 class="text-2xl font-bold font-serif text-slate-900">Stay</h3>
+                            <p class="text-teal-600 text-sm font-medium mt-1">Hotels & Meals</p>
+                            <ul class="mt-5 space-y-3 text-gray-600 text-sm">
+                                <li class="flex gap-2"><span class="text-teal-600">✔</span>Handpicked hotels & resorts
+                                </li>
+                                <li class="flex gap-2"><span class="text-teal-600">✔</span>Daily breakfast & selected
+                                    meals</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experiences -->
+                    <div
+                        class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=80"
+                                class="w-full h-48 object-cover">
+                            <div
+                                class="absolute -bottom-7 left-6 w-14 h-14 rounded-full bg-teal-600 border-4 border-white flex items-center justify-center text-white text-2xl">
+                                🗺️
+                            </div>
+                        </div>
+                        <div class="p-6 pt-10">
+                            <h3 class="text-2xl font-bold font-serif text-slate-900">Experiences</h3>
+                            <p class="text-teal-600 text-sm font-medium mt-1">Sightseeing & Guide</p>
+                            <ul class="mt-5 space-y-3 text-gray-600 text-sm">
+                                <li class="flex gap-2"><span class="text-teal-600">✔</span>Attraction tickets included
+                                </li>
+                                <li class="flex gap-2"><span class="text-teal-600">✔</span>Expert local tour guide</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Care -->
+                    <div
+                        class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80"
+                                class="w-full h-48 object-cover">
+                            <div
+                                class="absolute -bottom-7 left-6 w-14 h-14 rounded-full bg-teal-600 border-4 border-white flex items-center justify-center text-white text-2xl">
+                                🛡️
+                            </div>
+                        </div>
+                        <div class="p-6 pt-10">
+                            <h3 class="text-2xl font-bold font-serif text-slate-900">Care</h3>
+                            <p class="text-teal-600 text-sm font-medium mt-1">Assistance & Support</p>
+                            <ul class="mt-5 space-y-3 text-gray-600 text-sm">
+                                <li class="flex gap-2"><span class="text-teal-600">✔</span>Travel assistance throughout
+                                </li>
+                                <li class="flex gap-2"><span class="text-teal-600">✔</span>24/7 customer support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Offers & Deals -->
+        <section class="relative overflow-hidden bg-teal-950 py-20">
+            <div class="absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80"
+                    class="w-full h-full object-cover opacity-20" alt="Travel background">
+            </div>
+            <div class="absolute inset-0 bg-teal-900"></div>
+
+            <div class="relative z-10 px-6 md:px-10 lg:px-20">
+                <div class="text-center mb-12">
+                    <p class="uppercase tracking-[5px] text-teal-300 text-sm font-semibold">
+                        Special Travel Offers
+                    </p>
+                    <h2 class="mt-3 text-4xl md:text-5xl font-bold font-serif text-white">
+                        Travel More, <span class="text-teal-300">Save More</span>
+                    </h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-teal-100/70 leading-7">
+                        Discover exclusive deals designed to make your dream holiday even more rewarding.
+                    </p>
+                </div>
+
+                <div class="max-w-7xl mx-auto grid lg:grid-cols-5 gap-5">
+
+                    <!-- Big Offer -->
+                    <div
+                        class="lg:col-span-3 relative overflow-hidden rounded-[28px] border border-teal-300/20 min-h-[520px] group">
+                        <img src="https://images.unsplash.com/photo-1646390376212-1603f1aeb69c?q=80&w=870&auto=format&fit=crop&w=1200&q=80"
+                            class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105"
+                            alt="Travel destination">
+                        <div class="absolute inset-0 bg-gradient-to-br from-teal-950/95 via-teal-900/75 to-teal-900/30">
+                        </div>
+
+                        <div class="relative z-10 p-8 md:p-10 h-full flex flex-col justify-between">
+                            <div>
+                                <span
+                                    class="inline-block px-4 py-2 rounded-full bg-white text-teal-900 text-xs font-bold tracking-wider">
+                                    LIMITED TIME
+                                </span>
+                                <p class="mt-12 text-teal-300 text-sm font-semibold tracking-wider">
+                                    SMART SAVER DEALS
+                                </p>
+                                <h3 class="mt-3 text-4xl md:text-5xl font-bold font-serif text-white leading-tight">
+                                    Plan Early,<br><span class="text-teal-300">Travel Better</span>
+                                </h3>
+                                <p class="mt-5 max-w-lg text-white/70 leading-7">
+                                    Book your dream destination in advance and enjoy exclusive savings on selected
+                                    travel packages.
+                                </p>
+                            </div>
+
+                            <div class="mt-10 flex flex-wrap items-center gap-7">
+                                <div>
+                                    <p class="text-xs uppercase tracking-wider text-white/60">Save up to</p>
+                                    <p class="text-5xl font-bold text-gray-200">20%</p>
+                                </div>
+                                <a href="booking.html"
+                                    class="px-7 py-3.5 rounded-full bg-white text-teal-950 font-semibold hover:bg-gray-300 transition duration-300">
+                                    Explore Deal
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side Offers -->
+                    <div class="lg:col-span-2 grid gap-5">
+
+                        <!-- Honeymoon Deal -->
+                        <div class="relative overflow-hidden rounded-[28px] border border-white/10 min-h-[230px] group">
+                            <img src="https://images.unsplash.com/photo-1519307212971-dd9561667ffb?q=80&w=387&auto=format&fit=crop"
+                                class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition duration-700"
+                                alt="Romantic travel">
+                            <div class="absolute inset-0 bg-teal-950/75"></div>
+
+                            <div class="relative z-10 p-7 h-full">
+                                <div class="flex justify-between">
+                                    <span
+                                        class="inline-block px-4 py-2 rounded-full bg-white text-teal-900 text-xs font-bold tracking-wider">
+                                        EXCLUSIVE DEAL
+                                    </span>
+                                    <span class="text-3xl font-bold text-gray-200">15%</span>
+                                </div>
+                                <p class="mt-6 text-xs uppercase tracking-wider text-teal-300 font-semibold">
+                                    Couple Special
+                                </p>
+                                <h3 class="mt-2 text-2xl md:text-3xl font-bold font-serif text-white">
+                                    Honeymoon Escape
+                                </h3>
+                                <p class="mt-2 text-sm text-white/60 max-w-sm">
+                                    Romantic journeys with exclusive couple-friendly deals.
+                                </p><br>
+                                <a href="booking.html"
+                                    class="px-7 py-3.5 rounded-full bg-white text-teal-950 font-semibold hover:bg-gray-300 transition duration-300">
+                                    Explore Deal
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Family Deal -->
+                        <div class="relative overflow-hidden rounded-[28px] border border-white/10 min-h-[230px] group">
+                            <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=1000&q=80"
+                                class="absolute inset-0 w-full h-full object-cover opacity-45 group-hover:scale-105 transition duration-700"
+                                alt="Family vacation">
+                            <div class="absolute inset-0 bg-teal-950/80"></div>
+
+                            <div class="relative z-10 p-7 h-full">
+                                <div class="flex justify-between">
+                                    <span
+                                        class="inline-block px-4 py-2 rounded-full bg-white text-teal-900 text-xs font-bold tracking-wider">
+                                        LIMITED TIME
+                                    </span>
+                                    <span class="text-3xl font-bold text-gray-200">10%</span>
+                                </div>
+                                <p class="mt-6 text-xs uppercase tracking-wider text-teal-300 font-semibold">
+                                    Family Deal
+                                </p>
+                                <h3 class="mt-2 text-2xl md:text-3xl font-bold font-serif text-white">
+                                    Family Getaway
+                                </h3>
+                                <p class="mt-2 text-sm text-white/60 max-w-sm">
+                                    More memories, better value for your family.
+                                </p><br>
+                                <a href="booking.html"
+                                    class="px-7 py-3.5 rounded-full bg-white text-teal-950 font-semibold hover:bg-gray-300 transition duration-300">
+                                    Explore Deal
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="max-w-6xl mx-auto mt-8 border-t border-white/10 pt-7">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                        <div>
+                            <p class="text-2xl md:text-3xl font-bold text-white">50+</p>
+                            <p class="mt-1 text-sm text-white/50">Top Destinations</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl md:text-3xl font-bold text-white">10K+</p>
+                            <p class="mt-1 text-sm text-white/50">Happy Travelers</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl md:text-3xl font-bold text-white">4.9/5</p>
+                            <p class="mt-1 text-sm text-white/50">Customer Rating</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl md:text-3xl font-bold text-white">100%</p>
+                            <p class="mt-1 text-sm text-white/50">Safe & Secure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-20 bg-[#f5faf9]">
+            <div class="px-6 md:px-10 lg:px-20">
+                <div class="text-center mb-12">
+                    <p class="uppercase tracking-[5px] text-teal-600 text-sm font-semibold">
+                        Traveler Stories
+                    </p>
+                    <h2 class="mt-3 text-4xl md:text-5xl font-bold font-serif text-gray-900">
+                        Stories From Our <span class="text-teal-600">Travelers</span>
+                    </h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-500 leading-7">
+                        Real journeys, unforgettable memories and experiences shared by travelers who explored the world
+                        with Zesta Explorer.
+                    </p>
+                </div>
+
+                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Testimonial 1 -->
+                    <div
+                        class="bg-white rounded-3xl p-7 border border-gray-100 shadow hover:-translate-y-2 hover:shadow-lg transition duration-300">
+                        <div class="text-lg">⭐⭐⭐⭐⭐</div>
+                        <div class="mt-5">
+                            <p class="mt-1 text-gray-600 leading-7 text-[15px]">
+                                Our Maldives trip was beautifully planned from start to finish. Everything was smooth,
+                                comfortable and completely stress-free.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-5 border-t border-gray-100">
+                            <h4 class="font-bold text-gray-900">Priya K.</h4>
+                            <p class="text-sm text-teal-600 mt-1">Maldives</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div
+                        class="bg-white rounded-3xl p-7 border border-gray-100 shadow hover:-translate-y-2 hover:shadow-lg transition duration-300">
+                        <div class="text-lg">⭐⭐⭐⭐⭐</div>
+                        <div class="mt-5">
+                            <p class="mt-1 text-gray-600 leading-7 text-[15px]">
+                                Switzerland was absolutely breathtaking. The itinerary was perfectly planned and every
+                                experience felt special.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-5 border-t border-gray-100">
+                            <h4 class="font-bold text-gray-900">Arun R.</h4>
+                            <p class="text-sm text-teal-600 mt-1">Switzerland</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div
+                        class="bg-white rounded-3xl p-7 border border-gray-100 shadow hover:-translate-y-2 hover:shadow-lg transition duration-300">
+                        <div class="text-lg">⭐⭐⭐⭐⭐</div>
+                        <div class="mt-5">
+                            <p class="mt-1 text-gray-600 leading-7 text-[15px]">
+                                From the hotel to the transfers, everything was arranged perfectly. Our Dubai holiday
+                                was truly memorable.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-5 border-t border-gray-100">
+                            <h4 class="font-bold text-gray-900">Meera S.</h4>
+                            <p class="text-sm text-teal-600 mt-1">Dubai</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div
+                        class="bg-white rounded-3xl p-7 border border-gray-100 shadow hover:-translate-y-2 hover:shadow-lg transition duration-300">
+                        <div class="text-lg">⭐⭐⭐⭐⭐</div>
+                        <div class="mt-5">
+                            <p class="mt-1 text-gray-600 leading-7 text-[15px]">
+                                Our family holiday in Canada was amazing. Zesta made the entire journey easy,
+                                comfortable and enjoyable.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-5 border-t border-gray-100">
+                            <h4 class="font-bold text-gray-900">Rahul M.</h4>
+                            <p class="text-sm text-teal-600 mt-1">Canada</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div
+                        class="bg-white rounded-3xl p-7 border border-gray-100 shadow hover:-translate-y-2 hover:shadow-lg transition duration-300">
+                        <div class="text-lg">⭐⭐⭐⭐⭐</div>
+                        <div class="mt-5">
+                            <p class="mt-1 text-gray-600 leading-7 text-[15px]">
+                                New Zealand was a dream destination for us. The experiences and support from Zesta
+                                exceeded our expectations.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-5 border-t border-gray-100">
+                            <h4 class="font-bold text-gray-900">Ananya P.</h4>
+                            <p class="text-sm text-teal-600 mt-1">New Zealand</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div
+                        class="bg-white rounded-3xl p-7 text-white shadow hover:-translate-y-2 transition duration-300">
+                        <div class="text-lg">⭐⭐⭐⭐⭐</div>
+                        <div class="mt-5">
+                            <p class="mt-1 text-gray-600 leading-7 text-[15px]">
+                                Every detail was thoughtfully handled. Zesta Explorer turned our dream vacation into a
+                                beautiful memory.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-5 border-t border-white/20">
+                            <h4 class="font-bold text-gray-900">Nisha S.</h4>
+                            <p class="text-sm text-teal-300 mt-1">France</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black">
+            <div class="mx-auto px-5 py-5">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-10">
+
+                    <!-- Logo -->
+                    <div>
+                        <img src="image/zestlogoo.png" class="w-40 mb-4">
+                        <p class="text-gray-300 leading-7 text-sm">
+                            Explore more. Live more. Let us take you to the most beautiful places on Earth.
+                        </p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Quick Links</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li><a href="index.html" class="hover:text-teal-600">Home</a></li>
+                            <li><a href="about.html" class="hover:text-teal-600">About Us</a></li>
+                            <li><a href="destination.html" class="hover:text-teal-600">Destinations</a></li>
+                            <li><a href="packages.html" class="hover:text-teal-600">Packages</a></li>
+                            <li><a href="#" class="hover:text-teal-600">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Top Destinations -->
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Top Destinations</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>Bali</li>
+                            <li>Canada</li>
+                            <li>Mexico</li>
+                            <li>Maldives</li>
+                            <li>Switzerland</li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Support</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>FAQs</li>
+                            <li>Privacy Policy</li>
+                            <li>Terms & Conditions</li>
+                            <li>Refund Policy</li>
+                            <li>Travel Insurance</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Contact Us</h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex gap-3">📞 <span>+91 87787 38692</span></li>
+                            <li class="flex gap-3">📧 <span>info@zestaexplorer.com</span></li>
+                            <li class="flex gap-3">📍 <span>123, Travel Street,<br>Chennai - 600001</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm">
+                    © 2026 Zesta Explorer. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+</body>
+
+</html>

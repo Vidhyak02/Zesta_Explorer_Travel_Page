@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Others</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <section>
+
+        <!--Nav Bar-->
+        <nav class="bg-white fixed shadow-lg w-full z-50">
+            <div class="max-w-6xl flex items-center justify-between">
+                <img src="image/zestlogo.png" class="h-15 w-20 mx-10 my-5">
+                <!-- Desktop Nav Links (hidden on mobile) -->
+                <div class="hidden md:flex space-x-10 text-gray-600 font-medium">
+                    <a href="index.html" class="hover:text-teal-600">HOME</a></li>
+                    <a href="about.html" class="hover:text-teal-600">ABOUT US</a></li>
+                    <div class="relative group">
+                        <a href="destination.html"
+                            class=" hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            DESTINATIONS
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="asia.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Asia</a>
+                            <a href="europe.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Europe</a>
+                            <a href="northamerica.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">North
+                                America</a>
+                            <a href="others.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Others</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="packages.html"
+                            class="hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            PACKAGES
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="family.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Family</a>
+                            <a href="honeymoon.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Honeymoon</a>
+                            <a href="budget.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Budget</a>
+                            <a href="adventure.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Adventure</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="#" class=" hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            LUXURY ESCAPES
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="#"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">7
+                                Star Hotels</a>
+                            <a href="#"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Private
+                                Island</a>
+                            <a href="#"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Luxury
+                                Cruise</a>
+                            <a href="#"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Private
+                                Helicopter</a>
+                        </div>
+
+                    </div>
+                    <a href="#" class="hover:text-teal-600">CONTACT US</a>
+                </div>
+
+                <!-- Desktop Button -->
+                <a href="#"
+                    class="absolute hidden md:block bg-teal-600 text-white px-4 py-2 right-10  rounded-lg hover:bg-teal-500">
+                    Book Now
+                </a>
+                <label for="menuToggle" class="md:hidden flex flex-col space-y-1.5 mx-10 cursor-pointer">
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                </label>
+
+            </div>
+
+            <input type="checkbox" id="menuToggle" class="hidden peer" />
+            <div class="hidden peer-checked:block md:hidden bg-white px-6 pb-4">
+                <ul class="flex flex-col space-y-3 text-gray-600 font-medium">
+                    <li><a href="index.html" class="block hover:text-teal-600">HOME</a></li>
+                    <li><a href="about.html" class="block hover:text-teal-600">ABOUT US</a></li>
+                    <li><a href="destination.html" class="block hover:text-teal-600">DESTINATIONS</a></li>
+                    <li><a href="packages.html" class="block hover:text-teal-600">PACKAGES</a></li>
+                    <li><a href="#" class="block hover:text-teal-600">LUXURY</a></li>
+                    <li><a href="#" class="block hover:text-teal-600">CONTACT US</a></li>
+                </ul>
+                <a href="#" class="mt-4 inline-block bg-teal-700 text-white px-4 py-2 rounded-lg hover:bg-teal-600">
+                    Book Now
+                </a>
+            </div>
+        </nav>
+        <!-- Hero Section -->
+        <section class="relative h-screen overflow-hidden">
+            <img src="https://plus.unsplash.com/premium_photo-1664302700221-bd1549347986?q=80&w=1479&auto=format&fit=crop"
+                alt="South Africa" class="absolute inset-0 w-full h-full object-bottom object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/30 via-black/10 to-transparent"></div>
+            <div class="relative z-10 flex items-center h-full">
+                <div class="max-w-7xl mx-auto w-full px-8">
+                    <div class="max-w-2xl">
+                        <span class="rounded-full text-teal-300 tracking-[5px] uppercase text-lg">
+                            Explore Other Countries
+                        </span>
+                        <h1 class="uppercase mt-6 text-xl md:text-4xl font-black text-white leading-wider font-serif">
+                            Explore the World's Hidden Wonders
+                        </h1>
+                        <p class="mt-8 text-sm md:text-lg text-gray-200 leading-8 max-w-xl">
+                            Discover spectacular landscapes, vibrant cultures, ancient history, and thrilling adventures
+                            across
+                            some of the world's most remarkable destinations.
+                        </p>
+                        <div class="mt-10 flex flex-wrap gap-5">
+                            <a href="#france"
+                                class="uppercase px-5 md:px-8 py-2 md:py-4 rounded-full bg-teal-600 text-white font-semibold hover:bg-teal-700 transition">
+                                Explore other countries
+                            </a>
+                            <a href="contact.html"
+                                class="uppercase px-5 md:px-8 py-2 md:py-4 rounded-full border border-white text-white hover:bg-white hover:text-black transition">
+                                For Enquiry
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Destination Selection Section -->
+        <section class="py-20 bg-gray-300">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-14">
+                    <p class="uppercase tracking-[5px] text-teal-600 font-semibold">
+                        Explore Other Countries
+                    </p>
+                    <h2 class="text-4xl md:text-5xl font-bold font-serif text-gray-900 mt-3">
+                        Choose Your Dream Destination
+                    </h2>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <div
+                        class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-2">
+                        <img src="https://plus.unsplash.com/premium_photo-1675824592772-4d0f0daa067e?q=80&w=869&auto=format&fit=crop"
+                            class="w-full h-56 object-cover group-hover:scale-110 transition duration-700">
+                        <div class="p-6 text-center">
+                            <h3 class="text-2xl font-bold">New Zealand</h3>
+                            <p class="text-yellow-500 mt-2">⭐ 4.9</p>
+                            <a href="#france"
+                                class="inline-block mt-5 px-6 py-2 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition">
+                                Explore
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1734007929985-ced7bdd53843?q=80&w=870&auto=format&fit=crop"
+                            class="w-full h-56 object-cover group-hover:scale-110 transition duration-700">
+                        <div class="p-6 text-center">
+                            <h3 class="text-2xl font-bold">Australia</h3>
+                            <p class="text-yellow-500 mt-2">⭐ 4.9</p>
+                            <a href="#switzerland"
+                                class="inline-block mt-5 px-6 py-2 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition">
+                                Explore
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1496497243327-9dccd845c35f?q=80&w=870&auto=format&fit=crop"
+                            class="w-full h-56 object-cover group-hover:scale-110 transition duration-700">
+                        <div class="p-6 text-center">
+                            <h3 class="text-2xl font-bold">South Africa</h3>
+                            <p class="text-yellow-500 mt-2">⭐ 4.8</p>
+                            <a href="#italy"
+                                class="inline-block mt-5 px-6 py-2 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition">
+                                Explore
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-2">
+                        <img src="https://plus.unsplash.com/premium_photo-1694475222001-b10ed72025a5?q=80&w=774&auto=format&fit=crop"
+                            class="w-full h-56 object-cover group-hover:scale-110 transition duration-700">
+                        <div class="p-6 text-center">
+                            <h3 class="text-2xl font-bold">Egypt</h3>
+                            <p class="text-yellow-500 mt-2">⭐ 4.8</p>
+                            <a href="#norway"
+                                class="inline-block mt-5 px-6 py-2 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition">
+                                Explore
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-2">
+                        <img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?q=80&w=871&auto=format&fit=crop"
+                            class="w-full h-56 object-cover group-hover:scale-110 transition duration-700">
+                        <div class="p-6 text-center">
+                            <h3 class="text-2xl font-bold">Brazil</h3>
+                            <p class="text-yellow-500 mt-2">⭐ 4.8</p>
+                            <a href="#greece"
+                                class="inline-block mt-5 px-6 py-2 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition">
+                                Explore
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Zealand Section -->
+        <section id="france" class="py-20 bg-gradient-to-b from-gray-100 via-blue-50 to-blue-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <p class="uppercase tracking-[6px] text-teal-600 font-semibold">Other DESTINATIONS</p>
+                    <h2 class="uppercase text-4xl md:text-5xl font-bold font-serif mt-3 text-gray-900">
+                        Discover New Zealand
+                    </h2>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="group overflow-hidden rounded-[30px] shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=80&w=871&auto=format&fit=crop"
+                            alt="New Zealand"
+                            class="w-full h-[550px] object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-teal-600 text-white px-5 py-2 rounded-full font-semibold">⭐ 4.9 Rating</div>
+                            <span class="text-gray-500">18,500+ Happy Travelers</span>
+                        </div>
+                        <h3 class="uppercase mt-7 text-4xl font-bold text-gray-900 leading-tight">
+                            Adventure in Every Direction
+                        </h3>
+                        <p class="mt-6 text-gray-600 leading-8">
+                            Discover dramatic mountains, crystal-clear lakes, rolling green landscapes, and
+                            unforgettable outdoor adventures in one of the world's most scenic destinations.
+                        </p>
+                        <div class="grid grid-cols-2 gap-5 mt-10">
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Best Season</p>
+                                <h4 class="mt-2 font-bold text-lg">December – March</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Duration</p>
+                                <h4 class="mt-2 font-bold text-lg">7 Days / 6 Nights</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Perfect For</p>
+                                <h4 class="mt-2 font-bold text-lg">Adventure Lovers, Couples & Nature Enthusiasts</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Starting From</p>
+                                <h4 class="mt-2 font-bold text-lg">$1299 / Person</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Zealand Attractions -->
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-14">
+                    <p class="uppercase tracking-[5px] mt-10 text-teal-600 font-semibold">MUST VISIT PLACES</p>
+                    <h2 class="uppercase text-4xl md:text-5xl font-bold font-serif mt-3 text-gray-900">Top Attractions
+                    </h2>
+                    <p class="mt-5 text-gray-600 max-w-2xl mx-auto">Iconic Experiences Across New Zealand</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[260px]">
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1735924527360-5d9e8dd8bebf?q=80&w=870&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-5 left-5 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 5.0
+                        </div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-white text-2xl font-bold">Milford Sound</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-4 bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1680180730599-61216c165c96?q=80&w=774&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.9
+                        </div>
+                        <div class="absolute bottom-5 left-5">
+                            <h3 class="text-white font-bold text-2xl">Rotorua</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1516051487970-145d71fb091d?q=80&w=844&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.9
+                        </div>
+                        <div class="absolute bottom-5 left-5">
+                            <h3 class="text-white font-bold text-2xl">Mount Cook National Park</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1722448903679-25efcd973e9a?q=80&w=870&auto=format&fit=crop"
+                            class="w-full h-full group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-5 left-5 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.8
+                        </div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-white text-2xl font-bold">Hobbiton Movie Set</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Australia Section -->
+        <section id="switzerland" class="py-20 bg-gradient-to-b from-gray-100 via-blue-50 to-blue-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="uppercase text-4xl md:text-5xl font-bold font-serif mt-3 text-gray-900">
+                        Discover Australia
+                    </h2>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="group overflow-hidden rounded-[30px] shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=870&auto=format&fit=crop"
+                            alt="Australia"
+                            class="w-full h-[550px] object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-teal-600 text-white px-5 py-2 rounded-full font-semibold">⭐ 4.9 Rating</div>
+                            <span class="text-gray-500">26,600+ Happy Travelers</span>
+                        </div>
+                        <h3 class="uppercase mt-7 text-4xl font-bold text-gray-900 leading-tight">
+                            Discover the Land Down Under
+                        </h3>
+                        <p class="mt-6 text-gray-600 leading-8">
+                            From vibrant cities and golden beaches to spectacular reefs and rugged outback adventures,
+                            Australia offers experiences unlike anywhere else.
+                        </p>
+                        <div class="grid grid-cols-2 gap-5 mt-10">
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Best Season</p>
+                                <h4 class="mt-2 font-bold text-lg">September – November | March – May</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Duration</p>
+                                <h4 class="mt-2 font-bold text-lg">8 Days / 7 Nights</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Perfect For</p>
+                                <h4 class="mt-2 font-bold text-lg">Families, Beach Lovers & Adventure Seekers</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Starting From</p>
+                                <h4 class="mt-2 font-bold text-lg">$1499 / Person</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Australia Attractions -->
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-14">
+                    <p class="uppercase tracking-[5px] mt-10 text-teal-600 font-semibold">MUST VISIT PLACES</p>
+                    <h2 class="uppercase text-4xl md:text-5xl font-bold font-serif mt-3 text-gray-900">Top Attractions
+                    </h2>
+                    <p class="mt-5 text-gray-600 text-xl max-w-2xl mx-auto">Iconic Experiences Across Australia</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[260px]">
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1616128618694-96e9e896ecb7?q=80&w=990&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-5 left-5 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 5.0
+                        </div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-white text-2xl font-bold">Sydney Opera House</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-4 bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1582623838120-455da222cdc7?q=80&w=774&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 5.0
+                        </div>
+                        <div class="absolute bottom-5 left-5">
+                            <h3 class="text-white font-bold text-2xl">Great Barrier Reef</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1551980424-665454563867?q=80&w=774&auto=format&fit=crop"
+                            class="w-full h-full object-cover object-top group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.8
+                        </div>
+                        <div class="absolute bottom-5 left-5">
+                            <h3 class="text-white font-bold text-2xl">Bondi Beach</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1597218287783-cda137310aa8?q=80&w=870&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-5 left-5 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.9
+                        </div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-white text-2xl font-bold">Uluru(Ayers Rock)</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- South Africa Section -->
+        <section id="italy" class="py-20 bg-gradient-to-b from-gray-100 via-blue-50 to-blue-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="uppercase text-4xl md:text-5xl font-bold font-serif mt-3 text-gray-900">
+                        Discover South Africa
+                    </h2>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="group overflow-hidden rounded-[30px] shadow-2xl">
+                        <img src="https://plus.unsplash.com/premium_photo-1661936361131-c421746dcd0d?q=80&w=659&auto=format&fit=crop"
+                            alt="South Africa"
+                            class="w-full h-[550px] object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-teal-600 text-white px-5 py-2 rounded-full font-semibold">⭐ 4.8 Rating</div>
+                            <span class="text-gray-500">17,900+ Happy Travelers</span>
+                        </div>
+                        <h3 class="uppercase mt-7 text-4xl font-bold text-gray-900 leading-tight">Wild Beauty Awaits
+                        </h3>
+                        <p class="mt-6 text-gray-600 leading-8">
+                            Experience thrilling safaris, breathtaking coastlines, majestic mountains, and vibrant
+                            cities in one unforgettable destination.
+                        </p>
+                        <div class="grid grid-cols-2 gap-5 mt-10">
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Best Season</p>
+                                <h4 class="mt-2 font-bold text-lg">May – September</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Duration</p>
+                                <h4 class="mt-2 font-bold text-lg">7 Days / 6 Nights</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Perfect For</p>
+                                <h4 class="mt-2 font-bold text-lg">Wildlife Lovers, Adventure Travelers & Families</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Starting From</p>
+                                <h4 class="mt-2 font-bold text-lg">$1099 / Person</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- South Africa Attractions -->
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-14">
+                    <p class="uppercase tracking-[5px] mt-10 text-teal-600 font-semibold">MUST VISIT PLACES</p>
+                    <h2 class="uppercase text-4xl md:text-5xl font-bold font-serif mt-3 text-gray-900">Top Attractions
+                    </h2>
+                    <p class="mt-5 text-gray-600 text-xl max-w-2xl mx-auto">Iconic Experiences Across South Africa</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[260px]">
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1586943353950-95bdbe3207a1?q=80&w=1018&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-5 left-5 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 5.0
+                        </div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-white text-2xl font-bold">Kruger National Park</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-4 bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1591205024850-d3420e30469e?q=80&w=327&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.9
+                        </div>
+                        <div class="absolute bottom-5 left-5">
+                            <h3 class="text-white font-bold text-2xl">Table Mountain</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1682354499691-3ebb4f6da3ee?q=80&w=870&auto=format&fit=crop"
+                            class="w-full h-full object-cover object-top group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.8
+                        </div>
+                        <div class="absolute bottom-5 left-5">
+                            <h3 class="text-white font-bold text-2xl">Cape of Good Hope</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1721137158885-b92a4f8b641d?q=80&w=1031&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-5 left-5 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.8
+                        </div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-white text-2xl font-bold">Boulders Beach</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Egypt Section -->
+        <section id="norway" class="py-20 bg-gradient-to-b from-gray-100 via-blue-50 to-blue-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="uppercase text-4xl md:text-5xl font-bold font-serif mt-3 text-gray-900">
+                        Discover Egypt
+                    </h2>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="group overflow-hidden rounded-[30px] shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1606036685180-d6187349ab23?q=80&w=901&auto=format&fit=crop"
+                            alt="Egypt"
+                            class="w-full h-[550px] object-cover object-fit group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-teal-600 text-white px-5 py-2 rounded-full font-semibold">⭐ 4.8 Rating</div>
+                            <span class="text-gray-500">20,300+ Happy Travelers</span>
+                        </div>
+                        <h3 class="uppercase mt-7 text-4xl font-bold text-gray-900 leading-tight">
+                            Walk Through Ancient Wonders
+                        </h3>
+                        <p class="mt-6 text-gray-600 leading-8">
+                            Explore timeless pyramids, magnificent temples, the Nile River, and a civilization that has
+                            fascinated travelers for thousands of years.
+                        </p>
+                        <div class="grid grid-cols-2 gap-5 mt-10">
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Best Season</p>
+                                <h4 class="mt-2 font-bold text-lg">October – April</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Duration</p>
+                                <h4 class="mt-2 font-bold text-lg">6 Days / 5 Nights</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Perfect For</p>
+                                <h4 class="mt-2 font-bold text-lg">History Lovers, Families & Culture Enthusiasts</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Starting From</p>
+                                <h4 class="mt-2 font-bold text-lg">$949 / Person</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Egypt Attractions -->
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-14">
+                    <p class="uppercase tracking-[5px] mt-10 text-teal-600 font-semibold">MUST VISIT PLACES</p>
+                    <h2 class="uppercase text-4xl md:text-5xl font-bold font-serif mt-3 text-gray-900">Top Attractions
+                    </h2>
+                    <p class="mt-5 text-gray-600 text-xl max-w-2xl mx-auto">Iconic Experiences Across Egypt</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[260px]">
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1600520611035-84157ad4084d?q=80&w=1031&auto=format&fit=crop"
+                            class="w-full h-full object-cover object-bottom group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-5 left-5 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 5.0
+                        </div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-white text-2xl font-bold">Great Pyramids of Giza</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-4 bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1664218018646-f009f078d9fd?q=80&w=1032&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.9
+                        </div>
+                        <div class="absolute bottom-5 left-5">
+                            <h3 class="text-white font-bold text-2xl">Valley of the Kings</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1579696931962-276174ded7af?q=80&w=870&auto=format&fit=crop"
+                            class="w-full h-full object-cover object-bottom group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.8
+                        </div>
+                        <div class="absolute bottom-5 left-5">
+                            <h3 class="text-white font-bold text-2xl">Nile River Cruise</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1648139210599-aa27a54177a4?q=80&w=999&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-5 left-5 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.9
+                        </div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-white text-2xl font-bold">Abu Simbel Temples</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brazil Section -->
+        <section id="greece" class="py-20 bg-gradient-to-b from-gray-100 via-blue-50 to-blue-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="uppercase text-4xl md:text-5xl font-bold font-serif mt-3 text-gray-900">
+                        Discover Brazil
+                    </h2>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="group overflow-hidden rounded-[30px] shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=870&auto=format&fit=crop"
+                            alt="Brazil"
+                            class="w-full h-[550px] object-cover object-left group-hover:scale-105 transition duration-700">
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-teal-600 text-white px-5 py-2 rounded-full font-semibold">⭐ 4.8 Rating</div>
+                            <span class="text-gray-500">19,600+ Happy Travelers</span>
+                        </div>
+                        <h3 class="uppercase mt-7 text-4xl font-bold text-gray-900 leading-tight">
+                            Feel the Energy of Brazil
+                        </h3>
+                        <p class="mt-6 text-gray-600 leading-8">
+                            Discover vibrant cities, breathtaking waterfalls, tropical rainforests, and world-famous
+                            beaches filled with culture and excitement.
+                        </p>
+                        <div class="grid grid-cols-2 gap-5 mt-10">
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Best Season</p>
+                                <h4 class="mt-2 font-bold text-lg">May – October</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Duration</p>
+                                <h4 class="mt-2 font-bold text-lg">7 Days / 6 Nights</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Perfect For</p>
+                                <h4 class="mt-2 font-bold text-lg">Beach Lovers, Adventure Seekers & Nature Lovers</h4>
+                            </div>
+                            <div class="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition">
+                                <p class="text-lg text-teal-600">Starting From</p>
+                                <h4 class="mt-2 font-bold text-lg">$1149 / Person</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brazil Attractions -->
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-14">
+                    <p class="uppercase tracking-[5px] mt-10 text-teal-600 font-semibold">MUST VISIT PLACES</p>
+                    <h2 class="uppercase text-4xl md:text-5xl font-bold font-serif mt-3 text-gray-900">Top Attractions
+                    </h2>
+                    <p class="mt-5 text-gray-600 text-xl max-w-2xl mx-auto">Iconic Experiences Across Brazil</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[260px]">
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1683331404237-64c763c70f5b?q=80&w=327&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-5 left-5 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 5.0
+                        </div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-white text-2xl font-bold">Christ the Redeemer</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-4 bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1648510399328-b8981e9fc1bb?q=80&w=870&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 5.0
+                        </div>
+                        <div class="absolute bottom-5 left-5">
+                            <h3 class="text-white font-bold text-2xl">Iguazu Falls</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1596573677494-accc8fbe89e8?q=80&w=868&auto=format&fit=crop"
+                            class="w-full h-full object-cover object-top group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.9
+                        </div>
+                        <div class="absolute bottom-5 left-5">
+                            <h3 class="text-white font-bold text-2xl">Copacabana Beach</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-3xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1619546952812-520e98064a52?q=80&w=871&auto=format&fit=crop"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                        <div class="absolute top-5 left-5 bg-white px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.8
+                        </div>
+                        <div class="absolute bottom-6 left-6">
+                            <h3 class="text-white text-2xl font-bold">Sugarloaf Mountain</h3>
+                            <a href="booking.html"
+                                class="inline-block mt-3 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full text-sm">Book
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Help Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="bg-white rounded-[32px] shadow-xl border border-gray-200 p-10 md:p-14">
+                    <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+                        <div class="max-w-2xl">
+                            <span
+                                class="inline-block px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold tracking-wide">
+                                Need Help?
+                            </span>
+                            <h2 class="mt-5 text-4xl md:text-5xl font-bold font-serif text-gray-900 leading-tight">
+                                Can't Decide <br>Where To Go?
+                            </h2>
+                            <p class="mt-6 text-gray-600 leading-8">
+                                Our travel experts will help you choose the perfect destination based on your budget,
+                                interests, and travel style. Let us make your next adventure truly unforgettable.
+                            </p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row lg:flex-col gap-4">
+                            <a href="contact.html"
+                                class="px-8 py-4 text-center border-2 border-teal-600 text-teal-600 rounded-full font-semibold hover:bg-teal-600 hover:text-white transition duration-300">
+                                Contact Us
+                            </a>
+                            <a href="booking.html"
+                                class="px-8 py-4 text-center bg-teal-600 text-white rounded-full font-semibold hover:bg-teal-700 transition duration-300">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="bg-black">
+            <div class="mx-auto px-5 py-5">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-10">
+                    <div>
+                        <img src="image/zestlogoo.png" class="w-40 mb-4">
+                        <p class="text-gray-300 leading-7 text-sm">
+                            Explore more. Live more. Let us take you to the most beautiful places on Earth.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Quick Links</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li><a href="index.html" class="hover:text-teal-600">Home</a></li>
+                            <li><a href="#" class="hover:text-teal-600">About Us</a></li>
+                            <li><a href="destination.html" class="hover:text-teal-600">Destinations</a></li>
+                            <li><a href="#" class="hover:text-teal-600">Packages</a></li>
+                            <li><a href="#" class="hover:text-teal-600">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Top Destinations</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>Bali</li>
+                            <li>Canada</li>
+                            <li>Mexico</li>
+                            <li>Maldives</li>
+                            <li>Switzerland</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Support</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>FAQs</li>
+                            <li>Privacy Policy</li>
+                            <li>Terms & Conditions</li>
+                            <li>Refund Policy</li>
+                            <li>Travel Insurance</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Contact Us</h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex gap-3">📞 <span>+91 87787 38692</span></li>
+                            <li class="flex gap-3">📧 <span>info@zestaexplorer.com</span></li>
+                            <li class="flex gap-3">📍 <span>123, Travel Street,<br>Chennai - 600001</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm">© 2026 Zesta Explorer. All Rights Reserved.</p>
+            </div>
+        </footer>

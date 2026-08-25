@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <section>
+
+        <!--Nav Bar-->
+        <nav class="bg-white fixed shadow-lg w-full z-50">
+            <div class="max-w-6xl flex items-center justify-between">
+                <img src="image/zestlogo.png" class="h-15 w-20 mx-10 my-5">
+                <!-- Desktop Nav Links (hidden on mobile) -->
+                <div class="hidden md:flex space-x-10 text-gray-600 font-medium">
+                    <a href="index.html" class="hover:text-teal-600">HOME</a></li>
+                    <a href="about.html" class="hover:text-teal-600">ABOUT US</a></li>
+                    <div class="relative group">
+                        <a href="destination.html"
+                            class=" hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            DESTINATIONS
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="asia.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Asia</a>
+                            <a href="europe.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Europe</a>
+                            <a href="northamerica.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">North
+                                America</a>
+                            <a href="others.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Others</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="packages.html"
+                            class="hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            PACKAGES
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="family.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Family</a>
+                            <a href="honeymoon.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Honeymoon</a>
+                            <a href="budget.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Budget</a>
+                            <a href="adventure.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Adventure</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="contact.html" class=" hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            LUXURY ESCAPES
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="#"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">7
+                                Star Hotels</a>
+                            <a href="#"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Private
+                                Island</a>
+                            <a href="#"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Luxury
+                                Cruise</a>
+                            <a href="#"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Private
+                                Helicopter</a>
+                        </div>
+
+                    </div>
+                    <a href="contact.html" class="hover:text-teal-600">CONTACT US</a>
+                </div>
+
+                <!-- Desktop Button -->
+                <a href="#"
+                    class="absolute hidden md:block bg-teal-600 text-white px-4 py-2 right-10  rounded-lg hover:bg-teal-500">
+                    Book Now
+                </a>
+                <label for="menuToggle" class="md:hidden flex flex-col space-y-1.5 mx-10 cursor-pointer">
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                </label>
+
+            </div>
+
+            <input type="checkbox" id="menuToggle" class="hidden peer" />
+            <div class="hidden peer-checked:block md:hidden bg-white px-6 pb-4">
+                <ul class="flex flex-col space-y-3 text-gray-600 font-medium">
+                    <li><a href="index.html" class="block hover:text-teal-600">HOME</a></li>
+                    <li><a href="about.html" class="block hover:text-teal-600">ABOUT US</a></li>
+                    <li><a href="destination.html" class="block hover:text-teal-600">DESTINATIONS</a></li>
+                    <li><a href="packages.html" class="block hover:text-teal-600">PACKAGES</a></li>
+                    <li><a href="#" class="block hover:text-teal-600">LUXURY</a></li>
+                    <li><a href="contact.html" class="block hover:text-teal-600">CONTACT US</a></li>
+                </ul>
+                <a href="#" class="mt-4 inline-block bg-teal-700 text-white px-4 py-2 rounded-lg hover:bg-teal-600">
+                    Book Now
+                </a>
+            </div>
+        </nav>
+
+
+        <body class="bg-slate-50 text-slate-900">
+
+            <!-- 1. HERO SECTION -->
+            <section class="px-5 md:px-10 lg:px-20 py-7">
+                <div class="relative max-w-7xl mx-auto min-h-[600px] rounded-[30px] overflow-hidden flex items-center">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=90"
+                        alt="Adventure Mountains" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/10"></div>
+
+                    <div class="relative z-10 px-8 md:px-14 lg:px-16 py-20 max-w-3xl text-white">
+                        <p class="uppercase tracking-[4px] text-sm font-semibold text-teal-200">Adventure Awaits</p>
+                        <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] font-semibold mt-5">
+                            Go Beyond
+                            <br>
+                            <span class="text-teal-200">The Ordinary.</span>
+                        </h1>
+                        <p class="text-white/80 text-base md:text-lg leading-8 max-w-xl mt-6">
+                            Chase new horizons, explore wild trails and discover experiences that turn every journey
+                            into a story worth telling.
+                        </p>
+                        <p class="text-sm text-white/70 mt-5">Mountains &nbsp;•&nbsp; Oceans &nbsp;•&nbsp; Wild Trails
+                        </p>
+
+                        <div class="flex flex-wrap gap-4 mt-8">
+                            <a href="#adventure-packages"
+                                class="bg-teal-600 hover:bg-teal-700 text-white px-7 py-3.5 rounded-xl font-semibold transition">
+                                Explore Adventures
+                            </a>
+                            <a href="#thrill"
+                                class="border border-white/60 hover:bg-white hover:text-slate-900 text-white px-7 py-3.5 rounded-xl font-semibold transition">
+                                Find Your Thrill
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="hidden lg:block absolute right-10 bottom-10 bg-white/95 backdrop-blur rounded-2xl p-5 w-60 shadow-2xl">
+                        <p class="text-xs uppercase tracking-[2px] text-slate-400">Featured Adventure</p>
+                        <h3 class="font-serif text-xl font-semibold mt-2">Himalayan Escape</h3>
+                        <div class="flex justify-between mt-4">
+                            <span class="text-sm text-slate-500">7 Days</span>
+                            <span class="font-bold text-teal-700">$899</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. FIND YOUR ADVENTURE -->
+            <section class="px-5 md:px-10 lg:px-20 py-20 bg-white">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center max-w-2xl mx-auto mb-12">
+                        <p class="uppercase tracking-[4px] text-xs text-teal-600 font-semibold">Choose Your Path</p>
+                        <h2 class="font-serif text-4xl md:text-5xl font-semibold mt-3">Find Your Adventure</h2>
+                        <p class="text-slate-500 mt-4 leading-7">
+                            From peaceful mountain trails to thrilling skies, choose the experience that calls you.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+                        <a href="#" class="group relative h-72 rounded-2xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=870&auto=format&fit=crop"
+                                alt="Mountains"
+                                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/50 transition"></div>
+                            <div class="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                                <span class="text-3xl">🏔️</span>
+                                <h3 class="font-serif text-2xl font-semibold mt-3">Mountains</h3>
+                                <p class="text-sm text-white/70 mt-1">Treks & wild trails</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="group relative h-72 rounded-2xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=800&q=85"
+                                alt="Water Adventure"
+                                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/50 transition"></div>
+                            <div class="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                                <span class="text-3xl">🌊</span>
+                                <h3 class="font-serif text-2xl font-semibold mt-3">Water</h3>
+                                <p class="text-sm text-white/70 mt-1">Rafting & diving</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="group relative h-72 rounded-2xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1564797663359-624328971f55?w=500&auto=format&fit=crop"
+                                alt="Air Adventure"
+                                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/50 transition"></div>
+                            <div class="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                                <span class="text-3xl">🪂</span>
+                                <h3 class="font-serif text-2xl font-semibold mt-3">Air</h3>
+                                <p class="text-sm text-white/70 mt-1">Skydiving & flying</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="group relative h-72 rounded-2xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1577971132997-c10be9372519?q=80&w=870&auto=format&fit=crop"
+                                alt="Wildlife Adventure"
+                                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-black/35 group-hover:bg-black/50 transition"></div>
+                            <div class="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                                <span class="text-3xl">🐾</span>
+                                <h3 class="font-serif text-2xl font-semibold mt-3">Wildlife</h3>
+                                <p class="text-sm text-white/70 mt-1">Safaris & nature</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. TRENDING ADVENTURES -->
+            <section class="px-5 md:px-10 lg:px-20 py-20 bg-slate-50">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
+                        <div>
+                            <p class="uppercase tracking-[4px] text-xs text-teal-600 font-semibold">Explore The
+                                Extraordinary</p>
+                            <h2 class="font-serif text-4xl md:text-5xl font-semibold mt-3">Trending Adventures</h2>
+                        </div>
+                        <p class="text-slate-500 max-w-md mt-4 md:mt-0 leading-6">
+                            Handpicked experiences for travelers who want something beyond the ordinary.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition">
+                            <div class="relative h-64 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=85"
+                                    alt="Everest Trek"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white/95 text-teal-700 text-xs font-bold px-4 py-2 rounded-full">TREK</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">Nepal</p>
+                                <h3 class="font-serif text-2xl font-semibold mt-2">Everest Base Camp</h3>
+                                <div class="flex justify-between mt-5">
+                                    <span class="text-sm text-slate-500">12 Days</span>
+                                    <span class="font-bold text-teal-700">$1,299</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition">
+                            <div class="relative h-64 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=85"
+                                    alt="Bali Adventure"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white/95 text-teal-700 text-xs font-bold px-4 py-2 rounded-full">WATER</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">Bali</p>
+                                <h3 class="font-serif text-2xl font-semibold mt-2">Bali Adventure</h3>
+                                <div class="flex justify-between mt-5">
+                                    <span class="text-sm text-slate-500">6 Days</span>
+                                    <span class="font-bold text-teal-700">$799</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition">
+                            <div class="relative h-64 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=900&q=85"
+                                    alt="Dubai Skydiving"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white/95 text-teal-700 text-xs font-bold px-4 py-2 rounded-full">AIR</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">Dubai</p>
+                                <h3 class="font-serif text-2xl font-semibold mt-2">Desert & Sky</h3>
+                                <div class="flex justify-between mt-5">
+                                    <span class="text-sm text-slate-500">5 Days</span>
+                                    <span class="font-bold text-teal-700">$949</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition">
+                            <div class="relative h-64 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=900&q=85"
+                                    alt="Swiss Alps"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white/95 text-teal-700 text-xs font-bold px-4 py-2 rounded-full">MOUNTAIN</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">Switzerland</p>
+                                <h3 class="font-serif text-2xl font-semibold mt-2">Swiss Alps Escape</h3>
+                                <div class="flex justify-between mt-5">
+                                    <span class="text-sm text-slate-500">8 Days</span>
+                                    <span class="font-bold text-teal-700">$1,499</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition">
+                            <div class="relative h-64 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1518182170546-07661fd94144?auto=format&fit=crop&w=900&q=85"
+                                    alt="Costa Rica"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white/95 text-teal-700 text-xs font-bold px-4 py-2 rounded-full">WILDLIFE</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">Costa Rica</p>
+                                <h3 class="font-serif text-2xl font-semibold mt-2">Wild Costa Rica</h3>
+                                <div class="flex justify-between mt-5">
+                                    <span class="text-sm text-slate-500">7 Days</span>
+                                    <span class="font-bold text-teal-700">$1,099</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition">
+                            <div class="relative h-64 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1469521669194-babb45599def?auto=format&fit=crop&w=900&q=85"
+                                    alt="New Zealand"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white/95 text-teal-700 text-xs font-bold px-4 py-2 rounded-full">EXTREME</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">New Zealand</p>
+                                <h3 class="font-serif text-2xl font-semibold mt-2">Wild New Zealand</h3>
+                                <div class="flex justify-between mt-5">
+                                    <span class="text-sm text-slate-500">10 Days</span>
+                                    <span class="font-bold text-teal-700">$1,599</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. CHOOSE YOUR THRILL -->
+            <section id="thrill" class="px-5 md:px-10 lg:px-20 py-20 bg-slate-900">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-12">
+                        <p class="uppercase tracking-[4px] text-xs text-teal-300 font-semibold">How Adventurous Are You?
+                        </p>
+                        <h2 class="font-serif text-4xl md:text-5xl text-white font-semibold mt-3">Choose Your Thrill
+                        </h2>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-5">
+                        <div class="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10">
+                            <span class="text-4xl">🌿</span>
+                            <p class="uppercase tracking-[3px] text-xs text-teal-300 mt-6">Level 01</p>
+                            <h3 class="font-serif text-3xl text-white font-semibold mt-2">Mild</h3>
+                            <p class="text-white/50 leading-7 mt-4">Perfect for explorers who prefer beautiful scenery
+                                and relaxed outdoor experiences.</p>
+                            <div class="mt-6 space-y-3 text-sm text-white/70">
+                                <p>✓ Scenic hikes</p>
+                                <p>✓ Nature walks</p>
+                                <p>✓ Camping</p>
+                            </div>
+                        </div>
+
+                        <div class="rounded-3xl bg-teal-700 p-8 md:p-10">
+                            <span class="text-4xl">🔥</span>
+                            <p class="uppercase tracking-[3px] text-xs text-teal-100 mt-6">Level 02</p>
+                            <h3 class="font-serif text-3xl text-white font-semibold mt-2">Bold</h3>
+                            <p class="text-white/75 leading-7 mt-4">For travelers ready to push themselves and
+                                experience something truly exciting.</p>
+                            <div class="mt-6 space-y-3 text-sm text-white/85">
+                                <p>✓ White-water rafting</p>
+                                <p>✓ Trekking</p>
+                                <p>✓ Ziplining</p>
+                            </div>
+                        </div>
+
+                        <div class="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10">
+                            <span class="text-4xl">⚡</span>
+                            <p class="uppercase tracking-[3px] text-xs text-teal-300 mt-6">Level 03</p>
+                            <h3 class="font-serif text-3xl text-white font-semibold mt-2">Extreme</h3>
+                            <p class="text-white/50 leading-7 mt-4">High-energy experiences for travelers looking for an
+                                unforgettable challenge.</p>
+                            <div class="mt-6 space-y-3 text-sm text-white/70">
+                                <p>✓ Skydiving</p>
+                                <p>✓ Bungee jumping</p>
+                                <p>✓ Advanced expeditions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. ADVENTURE PACKAGES -->
+            <section id="adventure-packages" class="px-5 md:px-10 lg:px-20 py-20 bg-white">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center max-w-2xl mx-auto mb-12">
+                        <p class="uppercase tracking-[4px] text-xs text-teal-600 font-semibold">Your Next Challenge</p>
+                        <h2 class="font-serif text-4xl md:text-5xl font-semibold mt-3">Adventure Packages</h2>
+                        <p class="text-slate-500 leading-7 mt-4">
+                            Carefully planned adventures designed for unforgettable journeys.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div
+                            class="group rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition">
+                            <div class="relative h-56 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=870&auto=format&fit=crop"
+                                    alt="Himalayan Trek"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white text-teal-700 text-xs font-bold px-4 py-2 rounded-full">TREKKING</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">Nepal</p>
+                                <h3 class="font-serif text-xl font-semibold mt-2">Himalayan Adventure</h3>
+                                <div class="flex justify-between items-center mt-5 pt-5 border-t">
+                                    <span class="text-sm text-slate-500">8 Days</span>
+                                    <span class="text-xl font-bold text-teal-700">$999</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition">
+                            <div class="relative h-56 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=900&q=85"
+                                    alt="Bali Water Adventure"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white text-teal-700 text-xs font-bold px-4 py-2 rounded-full">WATER</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">Bali</p>
+                                <h3 class="font-serif text-xl font-semibold mt-2">Island Adventure</h3>
+                                <div class="flex justify-between items-center mt-5 pt-5 border-t">
+                                    <span class="text-sm text-slate-500">6 Days</span>
+                                    <span class="text-xl font-bold text-teal-700">$799</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition">
+                            <div class="relative h-56 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1547235001-d703406d3f17?q=80&w=874&auto=format&fit=crop"
+                                    alt="Dubai Adventure"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white text-teal-700 text-xs font-bold px-4 py-2 rounded-full">AIR</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">Dubai</p>
+                                <h3 class="font-serif text-xl font-semibold mt-2">Desert Thrill</h3>
+                                <div class="flex justify-between items-center mt-5 pt-5 border-t">
+                                    <span class="text-sm text-slate-500">5 Days</span>
+                                    <span class="text-xl font-bold text-teal-700">$949</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition">
+                            <div class="relative h-56 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=900&q=85"
+                                    alt="Swiss Alps"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white text-teal-700 text-xs font-bold px-4 py-2 rounded-full">MOUNTAIN</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">Switzerland</p>
+                                <h3 class="font-serif text-xl font-semibold mt-2">Swiss Alps Explorer</h3>
+                                <div class="flex justify-between items-center mt-5 pt-5 border-t">
+                                    <span class="text-sm text-slate-500">8 Days</span>
+                                    <span class="text-xl font-bold text-teal-700">$1,499</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition">
+                            <div class="relative h-56 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1536709017021-ce8f99c17e38?q=80&w=774&auto=format&fit=crop"
+                                    alt="Costa Rica"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white text-teal-700 text-xs font-bold px-4 py-2 rounded-full">WILDLIFE</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">Costa Rica</p>
+                                <h3 class="font-serif text-xl font-semibold mt-2">Wild Costa Rica</h3>
+                                <div class="flex justify-between items-center mt-5 pt-5 border-t">
+                                    <span class="text-sm text-slate-500">7 Days</span>
+                                    <span class="text-xl font-bold text-teal-700">$1,099</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition">
+                            <div class="relative h-56 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1469521669194-babb45599def?auto=format&fit=crop&w=900&q=85"
+                                    alt="New Zealand"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white text-teal-700 text-xs font-bold px-4 py-2 rounded-full">EXTREME</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">New Zealand</p>
+                                <h3 class="font-serif text-xl font-semibold mt-2">Wild New Zealand</h3>
+                                <div class="flex justify-between items-center mt-5 pt-5 border-t">
+                                    <span class="text-sm text-slate-500">10 Days</span>
+                                    <span class="text-xl font-bold text-teal-700">$1,599</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition">
+                            <div class="relative h-56 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1709402606682-400133d92ab2?q=80&w=870&auto=format&fit=crop"
+                                    alt="Safari"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white text-teal-700 text-xs font-bold px-4 py-2 rounded-full">SAFARI</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">Kenya</p>
+                                <h3 class="font-serif text-xl font-semibold mt-2">African Safari</h3>
+                                <div class="flex justify-between items-center mt-5 pt-5 border-t">
+                                    <span class="text-sm text-slate-500">7 Days</span>
+                                    <span class="text-xl font-bold text-teal-700">$1,299</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition">
+                            <div class="relative h-56 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1671572126647-d9c9526b353e?q=80&w=870&auto=format&fit=crop"
+                                    alt="Patagonia"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white text-teal-700 text-xs font-bold px-4 py-2 rounded-full">EXPEDITION</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">Patagonia</p>
+                                <h3 class="font-serif text-xl font-semibold mt-2">Patagonia Expedition</h3>
+                                <div class="flex justify-between items-center mt-5 pt-5 border-t">
+                                    <span class="text-sm text-slate-500">9 Days</span>
+                                    <span class="text-xl font-bold text-teal-700">$1,699</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl transition">
+                            <div class="relative h-56 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=900&q=85"
+                                    alt="Forest Adventure"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                                <span
+                                    class="absolute top-4 left-4 bg-white text-teal-700 text-xs font-bold px-4 py-2 rounded-full">NATURE</span>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-xs uppercase tracking-[2px] text-slate-400">Canada</p>
+                                <h3 class="font-serif text-xl font-semibold mt-2">Canadian Wilderness</h3>
+                                <div class="flex justify-between items-center mt-5 pt-5 border-t">
+                                    <span class="text-sm text-slate-500">8 Days</span>
+                                    <span class="text-xl font-bold text-teal-700">$1,399</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. WHY ADVENTURE WITH ZESTA -->
+            <section class="px-5 md:px-10 lg:px-20 py-20 bg-slate-50">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-14 items-center">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=821&auto=format&fit=crop"
+                                alt="Adventure Travel" class="w-full h-[500px] object-cover rounded-3xl">
+
+                            <div class="absolute bottom-6 left-6 bg-white rounded-2xl px-6 py-5 shadow-xl">
+                                <p class="text-2xl font-serif font-semibold">10+</p>
+                                <p class="text-xs text-slate-500 mt-1">Years of travel expertise</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="uppercase tracking-[4px] text-xs text-teal-600 font-semibold">Travel With
+                                Confidence</p>
+                            <h2 class="font-serif text-4xl md:text-5xl font-semibold mt-3">Why Adventure With Zesta?
+                            </h2>
+                            <p class="text-slate-500 leading-7 mt-5">
+                                Adventure should feel exciting, not complicated. We take care of the planning so you can
+                                focus on the experience.
+                            </p>
+
+                            <div class="grid sm:grid-cols-2 gap-5 mt-8">
+                                <div class="bg-white rounded-2xl p-6">
+                                    <span class="text-2xl">🧭</span>
+                                    <h3 class="font-semibold mt-4">Expert Guides</h3>
+                                    <p class="text-sm text-slate-500 mt-2 leading-6">Experienced local guides for every
+                                        journey.</p>
+                                </div>
+
+                                <div class="bg-white rounded-2xl p-6">
+                                    <span class="text-2xl">🛡️</span>
+                                    <h3 class="font-semibold mt-4">Safe Planning</h3>
+                                    <p class="text-sm text-slate-500 mt-2 leading-6">Carefully planned trips with
+                                        reliable partners.</p>
+                                </div>
+
+                                <div class="bg-white rounded-2xl p-6">
+                                    <span class="text-2xl">🎒</span>
+                                    <h3 class="font-semibold mt-4">Quality Gear</h3>
+                                    <p class="text-sm text-slate-500 mt-2 leading-6">Selected equipment for your
+                                        adventure.</p>
+                                </div>
+
+                                <div class="bg-white rounded-2xl p-6">
+                                    <span class="text-2xl">💬</span>
+                                    <h3 class="font-semibold mt-4">24/7 Support</h3>
+                                    <p class="text-sm text-slate-500 mt-2 leading-6">We're here whenever you need us.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. TRAVELER STORIES -->
+            <section class="px-5 md:px-10 lg:px-20 py-20 bg-white">
+                <div class="max-w-5xl mx-auto text-center">
+                    <p class="uppercase tracking-[4px] text-xs text-teal-600 font-semibold">Traveler Stories</p>
+                    <h2 class="font-serif text-4xl md:text-5xl font-semibold mt-3">Stories From The Trail</h2>
+
+                    <div class="mt-12 grid md:grid-cols-3 gap-5 text-left">
+                        <div class="bg-slate-50 rounded-2xl p-7">
+                            <div class="text-amber-500">★★★★★</div>
+                            <p class="font-serif text-lg leading-7 mt-5">“Every day felt like a new chapter. The views
+                                were incredible.”</p>
+                            <p class="text-sm text-slate-500 mt-6">— Maya R.</p>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-2xl p-7">
+                            <div class="text-amber-500">★★★★★</div>
+                            <p class="font-serif text-lg leading-7 mt-5">“The planning was effortless and the adventure
+                                was unforgettable.”</p>
+                            <p class="text-sm text-slate-500 mt-6">— Arjun K.</p>
+                        </div>
+
+                        <div class="bg-slate-50 rounded-2xl p-7">
+                            <div class="text-amber-500">★★★★★</div>
+                            <p class="font-serif text-lg leading-7 mt-5">“Exactly the kind of adventure we were looking
+                                for.”</p>
+                            <p class="text-sm text-slate-500 mt-6">— Sarah M.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. FINAL CTA -->
+            <section class="px-5 md:px-10 lg:px-20 pb-20">
+                <div class="max-w-7xl mx-auto">
+                    <div class="relative overflow-hidden rounded-[30px] bg-teal-800 px-8 md:px-16 py-20 text-center">
+                        <div class="absolute -top-28 -right-20 w-72 h-72 rounded-full bg-teal-700/50"></div>
+                        <div class="absolute -bottom-32 -left-20 w-80 h-80 rounded-full bg-teal-900/40"></div>
+
+                        <div class="relative z-10 max-w-3xl mx-auto">
+                            <p class="uppercase tracking-[4px] text-xs text-teal-200 font-semibold">Your Next Story
+                                Starts Here</p>
+                            <h2 class="font-serif text-4xl md:text-6xl text-white font-semibold mt-4 leading-tight">
+                                Don't Just Travel.
+                                <br>
+                                <span class="text-teal-200">Live The Adventure.</span>
+                            </h2>
+                            <p class="text-white/70 leading-7 mt-6 max-w-xl mx-auto">
+                                Step outside your comfort zone, discover new places and create memories that stay with
+                                you.
+                            </p>
+                            <a href="#adventure-packages"
+                                class="inline-block mt-8 bg-white text-teal-800 hover:bg-teal-50 px-8 py-4 rounded-xl font-semibold transition">
+                                Start Your Journey
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="bg-black">
+                <div class="mx-auto px-5 py-5">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-10">
+                        <div>
+                            <img src="image/zestlogoo.png" class="w-40 mb-4">
+                            <p class="text-gray-300 leading-7 text-sm">
+                                Explore more. Live more. Let us take you to the most beautiful places on Earth.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl text-teal-700 font-bold mb-5">Quick Links</h3>
+                            <ul class="space-y-3 text-gray-300">
+                                <li><a href="index.html" class="hover:text-teal-600">Home</a></li>
+                                <li><a href="about.html" class="hover:text-teal-600">About Us</a></li>
+                                <li><a href="destination.html" class="hover:text-teal-600">Destinations</a></li>
+                                <li><a href="packages.html" class="hover:text-teal-600">Packages</a></li>
+                                <li><a href="contact.html" class="hover:text-teal-600">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl text-teal-700 font-bold mb-5">Top Destinations</h3>
+                            <ul class="space-y-3 text-gray-300">
+                                <li>Bali</li>
+                                <li>Canada</li>
+                                <li>Mexico</li>
+                                <li>Maldives</li>
+                                <li>Switzerland</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl text-teal-700 font-bold mb-5">Support</h3>
+                            <ul class="space-y-3 text-gray-300">
+                                <li>FAQs</li>
+                                <li>Privacy Policy</li>
+                                <li>Terms & Conditions</li>
+                                <li>Refund Policy</li>
+                                <li>Travel Insurance</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl text-teal-700 font-bold mb-5">Contact Us</h3>
+                            <ul class="space-y-4 text-gray-300">
+                                <li class="flex gap-3">📞 <span>+91 87787 38692</span></li>
+                                <li class="flex gap-3">📧 <span>info@zestaexplorer.com</span></li>
+                                <li class="flex gap-3">📍 <span>123, Travel Street,<br>Chennai - 600001</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-300 text-sm">© 2026 Zesta Explorer. All Rights Reserved.</p>
+                </div>
+            </footer>
+
+        </body>
+
+</html>
