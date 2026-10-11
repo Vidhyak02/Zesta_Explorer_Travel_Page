@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZESTA EXPLORER</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <section>
+
+        <!--Nav Bar-->
+        <nav class="bg-white fixed shadow-lg w-full z-50">
+            <div class="max-w-6xl flex items-center justify-between">
+                <img src="image/zestlogo.png" class="h-15 w-20 mx-10 my-5">
+                <!-- Desktop Nav Links (hidden on mobile) -->
+                <div class="hidden md:flex space-x-10 text-gray-600 font-medium">
+                    <a href="index.html" class="hover:text-teal-600">HOME</a></li>
+                    <a href="about.html" class="hover:text-teal-600">ABOUT US</a></li>
+                    <div class="relative group">
+                        <a href="destination.html"
+                            class=" hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            DESTINATIONS
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="asia.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Asia</a>
+                            <a href="europe.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Europe</a>
+                            <a href="northamerica.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">North
+                                America</a>
+                            <a href="others.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Others</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="packages.html"
+                            class="hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            PACKAGES
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="family.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Family</a>
+                            <a href="honeymoon.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Honeymoon</a>
+                            <a href="budget.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Budget</a>
+                            <a href="adventure.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Adventure</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="luxury.html"
+                            class=" hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            LUXURY ESCAPES
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="stays.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Luxury
+                                Stays</a>
+                            <a href="island.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Private
+                                Island</a>
+                            <a href="cruise.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Luxury
+                                Cruise</a>
+                            <a href="royal.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Royal
+                                Retreats</a>
+                        </div>
+
+                    </div>
+                    <a href="contact.html" class="hover:text-teal-600">CONTACT US</a>
+                </div>
+
+                <!-- Desktop Button -->
+                <a href="booking.html"
+                    class="absolute hidden md:block bg-teal-600 text-white px-4 py-2 right-10  rounded-lg hover:bg-teal-500">
+                    Book Now
+                </a>
+                <label for="menuToggle" class="md:hidden flex flex-col space-y-1.5 mx-10 cursor-pointer">
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                </label>
+
+            </div>
+
+            <input type="checkbox" id="menuToggle" class="hidden peer" />
+            <div class="hidden peer-checked:block md:hidden bg-white px-6 pb-4">
+                <ul class="flex flex-col space-y-3 text-gray-600 font-medium">
+                    <li><a href="index.html" class="block hover:text-teal-600">HOME</a></li>
+                    <li><a href="about.html" class="block hover:text-teal-600">ABOUT US</a></li>
+                    <li><a href="destination.html" class="block hover:text-teal-600">DESTINATIONS</a></li>
+                    <li><a href="packages.html" class="block hover:text-teal-600">PACKAGES</a></li>
+                    <li><a href="luxury.html" class="block hover:text-teal-600">LUXURY</a></li>
+                    <li><a href="contact.html" class="block hover:text-teal-600">CONTACT US</a></li>
+                </ul>
+                <a href="booking.html"
+                    class="mt-4 inline-block bg-teal-700 text-white px-4 py-2 rounded-lg hover:bg-teal-600">
+                    Book Now
+                </a>
+            </div>
+        </nav>
+
+        <style>
+            .cruise-page {
+                font-family: 'DM Sans', sans-serif;
+                color: #15372f;
+                background: #f7f4ed;
+            }
+
+            .cruise-page .cruise-serif {
+                font-family: 'Playfair Display', serif;
+            }
+
+            .cruise-page .cruise-hero {
+                background:
+                    linear-gradient(90deg, rgba(3, 35, 36, .92), rgba(3, 35, 36, .55) 48%, rgba(3, 35, 36, .08)),
+                    url('https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=2000&q=90') center/cover;
+            }
+
+            .cruise-page .cruise-photo img {
+                transition: transform .75s ease;
+            }
+
+            .cruise-page .cruise-photo:hover img {
+                transform: scale(1.06);
+            }
+
+            .cruise-page .cruise-gold {
+                color: #c7a36b;
+            }
+
+            .cruise-page .cruise-btn {
+                background: #d7b77d;
+                color: #102f2b;
+                transition: .3s ease;
+            }
+
+            .cruise-page .cruise-btn:hover {
+                background: white;
+                transform: translateY(-2px);
+            }
+
+            .cruise-page .cruise-final {
+                background:
+                    linear-gradient(90deg, rgba(4, 36, 35, .9), rgba(4, 36, 35, .2)),
+                    url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=90') center/cover;
+            }
+        </style>
+
+        <div class="cruise-page">
+
+            <!-- SECTION 1: CINEMATIC HERO -->
+            <section class="cruise-hero relative flex min-h-[650px] items-center overflow-hidden md:min-h-[740px]">
+                <div class="mx-auto w-full max-w-[1400px] px-6 py-24 md:px-14 lg:px-20">
+                    <p class="mb-7 text-[10px] uppercase tracking-[.4em] text-[#e2c58f]">
+                        Zesta Explorer / Luxury Cruises
+                    </p>
+
+                    <h1
+                        class="cruise-serif max-w-4xl text-5xl leading-[1.08] text-white sm:text-6xl md:text-7xl lg:text-[82px]">
+                        Luxury Cruises,<br>
+                        <span class="italic text-[#e2c58f]">Redefined for You.</span>
+                    </h1>
+
+                    <p class="mt-7 max-w-lg text-sm leading-8 text-white/80 md:text-base">
+                        Embark on a journey of endless horizons, where exceptional
+                        comfort, extraordinary destinations and unforgettable experiences
+                        come together on the open sea.
+                    </p>
+
+                    <a href="#cruise-experience"
+                        class="cruise-btn mt-9 inline-flex items-center gap-5 rounded-full px-8 py-4 text-xs font-semibold">
+                        Explore Cruises <span>↗</span>
+                    </a>
+
+                    <div
+                        class="mt-16 flex flex-wrap items-center gap-3 text-[9px] uppercase tracking-[.22em] text-white/75">
+                        <span class="cruise-gold">—</span>
+                        New places <span>/</span> Fine dining <span>/</span> Unforgettable moments
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SECTION 2: WHY CRUISE -->
+            <section class="overflow-hidden px-6 py-20 md:px-12 md:py-24">
+                <div class="mx-auto grid max-w-[1320px] items-center gap-12 lg:grid-cols-[.85fr_1.15fr]">
+                    <div>
+                        <p class="mb-5 text-[10px] uppercase tracking-[.35em] cruise-gold">
+                            01 / Why cruise
+                        </p>
+                        <h2 class="cruise-serif text-4xl leading-tight md:text-5xl">
+                            The world looks<br>better from here.
+                        </h2>
+                        <p class="mt-6 max-w-md text-sm leading-7 text-stone-600">
+                            A luxury cruise isn't just a holiday — it's a collection of
+                            unforgettable moments. Wake up to new views, explore iconic
+                            destinations and enjoy seamless comfort along the way.
+                        </p>
+
+                        <div class="mt-9 grid grid-cols-2 gap-5 sm:grid-cols-4">
+                            <div class="border-r border-stone-300 pr-3">
+                                <span class="text-2xl cruise-gold">◎</span>
+                                <p class="mt-3 text-xs leading-5">Multiple<br>destinations</p>
+                            </div>
+                            <div class="border-r border-stone-300 pr-3">
+                                <span class="text-2xl cruise-gold">◇</span>
+                                <p class="mt-3 text-xs leading-5">World-class<br>amenities</p>
+                            </div>
+                            <div class="border-r border-stone-300 pr-3">
+                                <span class="text-2xl cruise-gold">≈</span>
+                                <p class="mt-3 text-xs leading-5">All-inclusive<br>options</p>
+                            </div>
+                            <div>
+                                <span class="text-2xl cruise-gold">✧</span>
+                                <p class="mt-3 text-xs leading-5">Curated<br>experiences</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative pb-7 pl-5">
+                        <div class="cruise-photo h-[390px] overflow-hidden rounded-t-full md:h-[450px]">
+                            <img class="h-full w-full object-cover"
+                                src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1200&q=90"
+                                alt="Luxury cruise ship at sea">
+                        </div>
+                        <div
+                            class="cruise-photo absolute bottom-0 right-0 h-44 w-1/2 overflow-hidden border-4 border-[#f7f4ed] md:h-56">
+                            <img class="h-full w-full object-cover"
+                                src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=85"
+                                alt="Resort-style pool and relaxing holiday">
+                        </div>
+                        <p
+                            class="cruise-serif absolute right-0 top-4 -translate-y-1/2 rotate-6 text-xl italic cruise-gold md:right-2 md:text-2xl">
+                            More than a trip
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SECTION 3: ONBOARD EXPERIENCE -->
+            <section id="cruise-experience" class="overflow-hidden bg-[#092f30] text-white">
+                <div class="grid lg:grid-cols-2">
+                    <div class="cruise-photo relative min-h-[380px] overflow-hidden lg:min-h-[560px]">
+                        <img class="absolute inset-0 h-full w-full object-cover"
+                            src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=1300&q=90"
+                            alt="Cruise ship surrounded by deep blue ocean">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#092f30]/40 to-transparent"></div>
+                        <p class="absolute bottom-7 left-7 text-[10px] uppercase tracking-[.3em] text-white/80">
+                            Life at sea, elevated
+                        </p>
+                    </div>
+
+                    <div class="flex items-center px-7 py-16 md:px-14 lg:px-16">
+                        <div class="max-w-xl">
+                            <p class="mb-5 text-[10px] uppercase tracking-[.35em] cruise-gold">
+                                02 / The cruise experience
+                            </p>
+                            <h2 class="cruise-serif text-4xl leading-tight md:text-5xl">
+                                Indulge in<br>every moment.
+                            </h2>
+                            <p class="mt-6 text-sm leading-8 text-white/70">
+                                From exceptional dining and lively entertainment to peaceful
+                                sea days, discover onboard experiences that make the journey
+                                just as memorable as the destinations.
+                            </p>
+
+                            <div class="mt-8 space-y-5">
+                                <div class="flex items-center gap-4 border-b border-white/15 pb-4">
+                                    <span
+                                        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#c7a36b] cruise-gold">♧</span>
+                                    <div>
+                                        <h3 class="cruise-serif text-xl">Fine Dining</h3>
+                                        <p class="mt-1 text-xs text-white/60">Memorable meals and global flavours.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 border-b border-white/15 pb-4">
+                                    <span
+                                        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#c7a36b] cruise-gold">♫</span>
+                                    <div>
+                                        <h3 class="cruise-serif text-xl">Entertainment</h3>
+                                        <p class="mt-1 text-xs text-white/60">Live performances, music and more.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 border-b border-white/15 pb-4">
+                                    <span
+                                        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#c7a36b] cruise-gold">✧</span>
+                                    <div>
+                                        <h3 class="cruise-serif text-xl">Wellness & Spa</h3>
+                                        <p class="mt-1 text-xs text-white/60">Relax, recharge and enjoy the quiet.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <span
+                                        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#c7a36b] cruise-gold">≈</span>
+                                    <div>
+                                        <h3 class="cruise-serif text-xl">Pools & Lounges</h3>
+                                        <p class="mt-1 text-xs text-white/60">Sunshine, sea views and slow afternoons.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="booking.html"
+                                class="cruise-btn mt-8 inline-flex items-center gap-4 rounded-full px-7 py-4 text-xs font-semibold">
+                                Plan Your Cruise <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SECTION 4: DESTINATIONS -->
+            <section class="px-6 py-20 md:px-12 md:py-28">
+                <div class="mx-auto max-w-[1320px]">
+                    <div class="grid gap-7 md:grid-cols-[.8fr_1.2fr] md:items-end">
+                        <div>
+                            <p class="mb-5 text-[10px] uppercase tracking-[.35em] cruise-gold">
+                                03 / Destinations
+                            </p>
+                            <h2 class="cruise-serif text-4xl leading-tight md:text-5xl">
+                                Iconic destinations.<br>Unforgettable journeys.
+                            </h2>
+                        </div>
+                        <p class="max-w-lg text-sm leading-7 text-stone-600 md:justify-self-end">
+                            Discover beautiful coastlines, vibrant cultures and remarkable
+                            landscapes across the globe — all while enjoying the comfort of
+                            your cruise.
+                        </p>
+                    </div>
+
+                    <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                        <a href="booking.html" class="cruise-photo group relative h-[360px] overflow-hidden">
+                            <img class="absolute inset-0 h-full w-full object-cover"
+                                src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=85"
+                                alt="Santorini Greece coastline">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-[#082f30]/95 via-transparent to-transparent">
+                            </div>
+                            <div class="absolute bottom-6 left-5 text-white">
+                                <p class="text-[9px] uppercase tracking-[.25em] cruise-gold">Mediterranean</p>
+                                <h3 class="cruise-serif mt-2 text-2xl">Santorini</h3>
+                                <p class="mt-1 text-xs text-white/75">Greece</p>
+                                <p class="mt-4 text-sm">Explore ↗</p>
+                            </div>
+                        </a>
+
+                        <a href="booking.html" class="cruise-photo group relative h-[360px] overflow-hidden">
+                            <img class="absolute inset-0 h-full w-full object-cover"
+                                src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=85"
+                                alt="Tropical coastline with turquoise water">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-[#082f30]/95 via-transparent to-transparent">
+                            </div>
+                            <div class="absolute bottom-6 left-5 text-white">
+                                <p class="text-[9px] uppercase tracking-[.25em] cruise-gold">Southeast Asia</p>
+                                <h3 class="cruise-serif mt-2 text-2xl">Phuket</h3>
+                                <p class="mt-1 text-xs text-white/75">Thailand</p>
+                                <p class="mt-4 text-sm">Explore ↗</p>
+                            </div>
+                        </a>
+
+                        <a href="booking.html" class="cruise-photo group relative h-[360px] overflow-hidden">
+                            <img class="absolute inset-0 h-full w-full object-cover"
+                                src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=85"
+                                alt="Mountain landscape near a Norwegian fjord">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-[#082f30]/95 via-transparent to-transparent">
+                            </div>
+                            <div class="absolute bottom-6 left-5 text-white">
+                                <p class="text-[9px] uppercase tracking-[.25em] cruise-gold">Northern Europe</p>
+                                <h3 class="cruise-serif mt-2 text-2xl">Fjords</h3>
+                                <p class="mt-1 text-xs text-white/75">Norway</p>
+                                <p class="mt-4 text-sm">Explore ↗</p>
+                            </div>
+                        </a>
+
+                        <a href="booking.html" class="cruise-photo group relative h-[360px] overflow-hidden">
+                            <img class="absolute inset-0 h-full w-full object-cover"
+                                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=85"
+                                alt="Dubai skyline at sunset">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-[#082f30]/95 via-transparent to-transparent">
+                            </div>
+                            <div class="absolute bottom-6 left-5 text-white">
+                                <p class="text-[9px] uppercase tracking-[.25em] cruise-gold">Middle East</p>
+                                <h3 class="cruise-serif mt-2 text-2xl">Dubai</h3>
+                                <p class="mt-1 text-xs text-white/75">United Arab Emirates</p>
+                                <p class="mt-4 text-sm">Explore ↗</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SECTION 5: LIFE ABOARD -->
+            <section class="overflow-hidden bg-[#eae5d9]">
+                <div class="grid lg:grid-cols-[1.1fr_.9fr]">
+                    <div class="cruise-photo relative min-h-[380px] overflow-hidden lg:min-h-[520px]">
+                        <img class="absolute inset-0 h-full w-full object-cover"
+                            src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1300&q=90"
+                            alt="Luxury resort pool with beautiful holiday atmosphere">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <span class="absolute bottom-7 left-7 text-[10px] uppercase tracking-[.3em] text-white">
+                            Your floating retreat
+                        </span>
+                    </div>
+
+                    <div class="flex items-center px-7 py-16 md:px-12 lg:px-16">
+                        <div>
+                            <p class="mb-5 text-[10px] uppercase tracking-[.35em] cruise-gold">
+                                04 / Life aboard
+                            </p>
+                            <h2 class="cruise-serif text-4xl leading-tight md:text-5xl">
+                                Your floating<br>resort awaits.
+                            </h2>
+                            <p class="mt-6 text-sm leading-7 text-stone-600">
+                                Make yourself at home in thoughtfully designed spaces,
+                                enjoy attentive service and discover new ways to unwind
+                                between destinations.
+                            </p>
+
+                            <div class="mt-8 grid grid-cols-2 gap-5">
+                                <div class="border-l-2 border-[#c7a36b] pl-4">
+                                    <h3 class="cruise-serif text-xl">Ocean-view suites</h3>
+                                    <p class="mt-2 text-xs leading-5 text-stone-500">Wake up to endless sea views.</p>
+                                </div>
+                                <div class="border-l-2 border-[#c7a36b] pl-4">
+                                    <h3 class="cruise-serif text-xl">Elegant lounges</h3>
+                                    <p class="mt-2 text-xs leading-5 text-stone-500">Find your favourite quiet corner.
+                                    </p>
+                                </div>
+                                <div class="border-l-2 border-[#c7a36b] pl-4">
+                                    <h3 class="cruise-serif text-xl">Personal service</h3>
+                                    <p class="mt-2 text-xs leading-5 text-stone-500">Thoughtful details throughout your
+                                        stay.</p>
+                                </div>
+                                <div class="border-l-2 border-[#c7a36b] pl-4">
+                                    <h3 class="cruise-serif text-xl">Open decks</h3>
+                                    <p class="mt-2 text-xs leading-5 text-stone-500">Enjoy sunsets and fresh ocean air.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <a href="booking.html"
+                                class="mt-9 inline-flex items-center gap-4 border-b border-[#c7a36b] pb-2 text-xs font-semibold uppercase tracking-widest">
+                                Explore your voyage <span class="cruise-gold">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SECTION 6: CHOOSE YOUR CRUISE -->
+            <section class="relative overflow-hidden bg-[#092f30] px-6 py-20 text-white md:px-12 md:py-24">
+                <div class="absolute inset-0 opacity-20">
+                    <img class="h-full w-full object-cover"
+                        src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80"
+                        alt="">
+                </div>
+
+                <div class="relative mx-auto max-w-[1320px]">
+                    <p class="mb-5 text-[10px] uppercase tracking-[.35em] cruise-gold">
+                        05 / Choose your voyage
+                    </p>
+                    <h2 class="cruise-serif text-4xl md:text-5xl">Find your perfect escape.</h2>
+                    <p class="mt-5 max-w-xl text-sm leading-7 text-white/65">
+                        Whether you dream of quiet coastlines or glamorous nights at sea,
+                        discover a cruise style that fits your travel mood.
+                    </p>
+
+                    <div class="mt-12 grid grid-cols-2 gap-7 sm:grid-cols-4">
+                        <a href="booking.html"
+                            class="group border-t border-white/25 pt-6 transition hover:border-[#d7b77d]">
+                            <span class="text-3xl cruise-gold">♧</span>
+                            <h3 class="cruise-serif mt-5 text-xl">Ocean Cruises</h3>
+                            <p class="mt-2 text-xs leading-5 text-white/60">Island routes and coastal escapes.</p>
+                            <span
+                                class="mt-5 inline-block text-sm cruise-gold transition group-hover:translate-x-2">Explore
+                                ↗</span>
+                        </a>
+
+                        <a href="booking.html"
+                            class="group border-t border-white/25 pt-6 transition hover:border-[#d7b77d]">
+                            <span class="text-3xl cruise-gold">⌁</span>
+                            <h3 class="cruise-serif mt-5 text-xl">Expedition Cruises</h3>
+                            <p class="mt-2 text-xs leading-5 text-white/60">Remote landscapes and wild beauty.</p>
+                            <span
+                                class="mt-5 inline-block text-sm cruise-gold transition group-hover:translate-x-2">Explore
+                                ↗</span>
+                        </a>
+
+                        <a href="booking.html"
+                            class="group border-t border-white/25 pt-6 transition hover:border-[#d7b77d]">
+                            <span class="text-3xl cruise-gold">◇</span>
+                            <h3 class="cruise-serif mt-5 text-xl">Luxury Cruises</h3>
+                            <p class="mt-2 text-xs leading-5 text-white/60">Premium suites and elevated service.</p>
+                            <span
+                                class="mt-5 inline-block text-sm cruise-gold transition group-hover:translate-x-2">Explore
+                                ↗</span>
+                        </a>
+
+                        <a href="booking.html"
+                            class="group border-t border-white/25 pt-6 transition hover:border-[#d7b77d]">
+                            <span class="text-3xl cruise-gold">♫</span>
+                            <h3 class="cruise-serif mt-5 text-xl">Themed Cruises</h3>
+                            <p class="mt-2 text-xs leading-5 text-white/60">Food, music and special interests.</p>
+                            <span
+                                class="mt-5 inline-block text-sm cruise-gold transition group-hover:translate-x-2">Explore
+                                ↗</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <section class="py-20 bg-gray-100">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <!-- Heading -->
+                <div class="text-center mb-16">
+
+                    <p class="uppercase tracking-[3px] text-gray-900 text-xl font-semibold">
+                        Travel Facts
+                    </p>
+
+                    <h2 class="uppercase mt-3 tracking-[2px] text-2xl md:text-4xl font-bold font-serif text-teal-700">
+                        Why Travelers Choose Us
+                    </h2>
+
+                    <p class="mt-5 text-gray-600 max-w-2xl mx-auto leading-8">
+                        Delivering exceptional travel experiences across the world's most
+                        breathtaking destinations.
+                    </p>
+
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    <!-- Card 1 -->
+                    <div
+                        class="group bg-teal-50 hover:bg-teal-200  rounded-3xl p-8 text-center shadow-md hover:shadow-2xl hover:-translate-y-3 transition duration-500">
+
+                        <div
+                            class="w-20 h-20 mx-auto rounded-full bg-teal-100 flex items-center justify-center text-4xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+
+                        <h3 class="mt-6 text-4xl font-bold text-gray-900">
+                            150+
+                        </h3>
+
+                        <p class="mt-2 text-gray-600 font-medium">
+                            Destinations
+                        </p>
+
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="group bg-teal-50 hover:bg-teal-200 rounded-3xl p-8 text-center shadow-md hover:shadow-2xl hover:-translate-y-3 transition duration-500">
+
+                        <div
+                            class="w-20 h-20 mx-auto rounded-full bg-teal-100 flex items-center justify-center text-4xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-plane-departure"></i>
+                        </div>
+
+                        <h3 class="mt-6 text-4xl font-bold text-gray-900">
+                            25K+
+                        </h3>
+
+                        <p class="mt-2 text-gray-600 font-medium">
+                            Happy Travelers
+                        </p>
+
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="group bg-teal-50 hover:bg-teal-200 rounded-3xl p-8 text-center shadow-md hover:shadow-2xl hover:-translate-y-3 transition duration-500">
+
+                        <div
+                            class="w-20 h-20 mx-auto rounded-full bg-teal-100 flex items-center justify-center text-4xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-hotel"></i>
+                        </div>
+
+                        <h3 class="mt-6 text-4xl font-bold text-gray-900">
+                            500+
+                        </h3>
+
+                        <p class="mt-2 text-gray-600 font-medium">
+                            Luxury Hotels
+                        </p>
+
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="group bg-teal-50 hover:bg-teal-200 rounded-3xl p-8 text-center shadow-md hover:shadow-2xl hover:-translate-y-3 transition duration-500">
+
+                        <div
+                            class="w-20 h-20 mx-auto rounded-full bg-teal-100 flex items-center justify-center text-4xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <h3 class="mt-6 text-4xl font-bold text-gray-900">
+                            4.9★
+                        </h3>
+
+                        <p class="mt-2 text-gray-600 font-medium">
+                            Customer Rating
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black">
+
+            <div class=" mx-auto px-5 py-5">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-10">
+                    <!-- Logo -->
+                    <div>
+                        <img src="image/zestlogoo.png" class="w-40 mb-4">
+                        <p class="text-gray-300 leading-7 text-sm">
+                            Explore more. Live more.
+                            Let us take you to the most beautiful
+                            places on Earth.
+                        </p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Quick Links</h3>
+
+                        <ul class="space-y-3 text-gray-300">
+                            <li><a href="index.html" class="hover:text-teal-600">Home</a></li>
+                            <li><a href="about.html" class="hover:text-teal-600">About Us</a></li>
+                            <li><a href="destination.html" class="hover:text-teal-600">Destinations</a></li>
+                            <li><a href="#" class="hover:text-teal-600">Packages</a></li>
+                            <li><a href="#" class="hover:text-teal-600">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Top Destinations -->
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Top Destinations</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>Bali</li>
+                            <li>Canada</li>
+                            <li>Mexico</li>
+                            <li>Maldives</li>
+                            <li>Switzerland</li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Support</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>FAQs</li>
+                            <li>Privacy Policy</li>
+                            <li>Terms & Conditions</li>
+                            <li>Refund Policy</li>
+                            <li>Travel Insurance</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Contact Us</h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex gap-3">
+                                📞
+                                <span>+91 87787 38692</span>
+                            </li>
+                            <li class="flex gap-3">
+                                📧
+                                <span>info@zestaexplorer.com</span>
+                            </li>
+                            <li class="flex gap-3">
+                                📍
+                                <span>123, Travel Street,<br>Chennai - 600001</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm">
+                    © 2026 Zesta Explorer. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+</body>
+
+</html>

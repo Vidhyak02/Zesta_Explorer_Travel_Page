@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZESTA EXPLORER</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <section>
+
+        <!--Nav Bar-->
+        <nav class="bg-white fixed shadow-lg w-full z-50">
+            <div class="max-w-6xl flex items-center justify-between">
+                <img src="image/zestlogo.png" class="h-15 w-20 mx-10 my-5">
+                <!-- Desktop Nav Links (hidden on mobile) -->
+                <div class="hidden md:flex space-x-10 text-gray-600 font-medium">
+                    <a href="index.html" class="hover:text-teal-600">HOME</a></li>
+                    <a href="about.html" class="hover:text-teal-600">ABOUT US</a></li>
+                    <div class="relative group">
+                        <a href="destination.html"
+                            class=" hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            DESTINATIONS
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="asia.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Asia</a>
+                            <a href="europe.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Europe</a>
+                            <a href="northamerica.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">North
+                                America</a>
+                            <a href="others.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Others</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="packages.html"
+                            class="hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            PACKAGES
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="family.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Family</a>
+                            <a href="honeymoon.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Honeymoon</a>
+                            <a href="budget.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Budget</a>
+                            <a href="adventure.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Adventure</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="luxury.html"
+                            class=" hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            LUXURY ESCAPES
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="stays.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Luxury
+                                Stays</a>
+                            <a href="island.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Private
+                                Island</a>
+                            <a href="cruise.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Luxury
+                                Cruise</a>
+                            <a href="royal.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Royal
+                                Retreats</a>
+                        </div>
+
+                    </div>
+                    <a href="contact.html" class="hover:text-teal-600">CONTACT US</a>
+                </div>
+
+                <!-- Desktop Button -->
+                <a href="booking.html"
+                    class="absolute hidden md:block bg-teal-600 text-white px-4 py-2 right-10  rounded-lg hover:bg-teal-500">
+                    Book Now
+                </a>
+                <label for="menuToggle" class="md:hidden flex flex-col space-y-1.5 mx-10 cursor-pointer">
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                </label>
+
+            </div>
+
+            <input type="checkbox" id="menuToggle" class="hidden peer" />
+            <div class="hidden peer-checked:block md:hidden bg-white px-6 pb-4">
+                <ul class="flex flex-col space-y-3 text-gray-600 font-medium">
+                    <li><a href="index.html" class="block hover:text-teal-600">HOME</a></li>
+                    <li><a href="about.html" class="block hover:text-teal-600">ABOUT US</a></li>
+                    <li><a href="destination.html" class="block hover:text-teal-600">DESTINATIONS</a></li>
+                    <li><a href="packages.html" class="block hover:text-teal-600">PACKAGES</a></li>
+                    <li><a href="luxury.html" class="block hover:text-teal-600">LUXURY</a></li>
+                    <li><a href="contact.html" class="block hover:text-teal-600">CONTACT US</a></li>
+                </ul>
+                <a href="booking.html"
+                    class="mt-4 inline-block bg-teal-700 text-white px-4 py-2 rounded-lg hover:bg-teal-600">
+                    Book Now
+                </a>
+            </div>
+        </nav>
+
+
+        <!-- Back Button -->
+        <div class="mx-auto max-w-6xl px-5 pt-8">
+            <a href="index.html"
+                class="inline-flex items-center gap-2 text-sm font-semibold text-[#315d4c] hover:text-[#c18b55]">
+                ← Back to Home
+            </a>
+        </div>
+
+        <!-- Booking Section -->
+        <section class="mx-auto max-w-6xl px-5 py-8 md:py-12">
+
+            <div class="grid overflow-hidden rounded-3xl bg-white shadow-xl lg:grid-cols-5">
+
+                <!-- Left Side -->
+                <div class="relative overflow-hidden bg-[#214b3b] p-8 text-white sm:p-10 lg:col-span-2 lg:p-12">
+
+                    <p class="mb-5 text-xs font-bold uppercase tracking-[4px] text-[#e9c99a]">
+                        Zesta Explorer
+                    </p>
+
+                    <h1 class="mb-5 text-4xl font-bold leading-tight md:text-5xl"
+                        style="font-family:'Playfair Display',serif;">
+                        Your Next Adventure Starts Here.
+                    </h1>
+
+                    <p class="mb-8 leading-7 text-white/75">
+                        Tell us about your dream trip. Choose your destination,
+                        pick your dates, and get ready to explore the world.
+                    </p>
+
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
+                        alt="Beautiful mountain travel destination" class="mb-8 h-52 w-full rounded-2xl object-cover">
+
+                    <div class="space-y-5">
+
+                        <div class="flex items-center gap-4">
+                            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-xl">
+                                ✈
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Your Dream Destination</h3>
+                                <p class="text-sm text-white/60">Choose where to go</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-xl">
+                                📅
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Your Travel Dates</h3>
+                                <p class="text-sm text-white/60">Plan your perfect getaway</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-xl">
+                                🧳
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Your Travel Experience</h3>
+                                <p class="text-sm text-white/60">Make it personal</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Right Side: Booking Form -->
+                <div class="p-6 sm:p-10 lg:col-span-3 lg:p-12">
+
+                    <div class="mb-8">
+                        <p class="mb-2 text-xs font-bold uppercase tracking-[3px] text-[#a47746]">
+                            Start Planning
+                        </p>
+
+                        <h2 class="text-3xl font-bold text-[#263b30] sm:text-4xl"
+                            style="font-family:'Playfair Display',serif;">
+                            Book Your Trip
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-gray-500">
+                            Fill in your travel details below to plan your next journey.
+                        </p>
+                    </div>
+
+
+                    <form action="#" method="get" class="space-y-6">
+
+                        <!-- Personal Details -->
+                        <div>
+                            <h3
+                                class="mb-4 border-b border-gray-100 pb-3 text-sm font-bold uppercase tracking-wider text-[#315d4c]">
+                                01. Personal Details
+                            </h3>
+
+                            <div class="grid gap-5 sm:grid-cols-2">
+
+                                <div>
+                                    <label for="fullname" class="mb-2 block text-sm font-semibold text-gray-700">
+                                        Full Name *
+                                    </label>
+                                    <input type="text" id="fullname" name="fullname" placeholder="Enter your name"
+                                        autocomplete="name" required
+                                        class="w-full rounded-xl border border-gray-200 bg-[#fafaf7] px-4 py-3 text-sm outline-none transition focus:border-[#315d4c] focus:ring-2 focus:ring-[#315d4c]/10">
+                                </div>
+
+                                <div>
+                                    <label for="email" class="mb-2 block text-sm font-semibold text-gray-700">
+                                        Email Address *
+                                    </label>
+                                    <input type="email" id="email" name="email" placeholder="you@example.com"
+                                        autocomplete="email" required
+                                        class="w-full rounded-xl border border-gray-200 bg-[#fafaf7] px-4 py-3 text-sm outline-none transition focus:border-[#315d4c] focus:ring-2 focus:ring-[#315d4c]/10">
+                                </div>
+
+                                <div>
+                                    <label for="phone" class="mb-2 block text-sm font-semibold text-gray-700">
+                                        Phone Number *
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Enter phone number"
+                                        autocomplete="tel" required
+                                        class="w-full rounded-xl border border-gray-200 bg-[#fafaf7] px-4 py-3 text-sm outline-none transition focus:border-[#315d4c] focus:ring-2 focus:ring-[#315d4c]/10">
+                                </div>
+
+                                <div>
+                                    <label for="country" class="mb-2 block text-sm font-semibold text-gray-700">
+                                        Country of Residence *
+                                    </label>
+                                    <input type="text" id="country" name="country" placeholder="Enter your country"
+                                        autocomplete="country-name" required
+                                        class="w-full rounded-xl border border-gray-200 bg-[#fafaf7] px-4 py-3 text-sm outline-none transition focus:border-[#315d4c] focus:ring-2 focus:ring-[#315d4c]/10">
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Trip Details -->
+                        <div>
+                            <h3
+                                class="mb-4 border-b border-gray-100 pb-3 text-sm font-bold uppercase tracking-wider text-[#315d4c]">
+                                02. Trip Details
+                            </h3>
+
+                            <div class="grid gap-5 sm:grid-cols-2">
+
+                                <div class="sm:col-span-2">
+                                    <label for="destination" class="mb-2 block text-sm font-semibold text-gray-700">
+                                        Destination *
+                                    </label>
+
+                                    <select id="destination" name="destination" required
+                                        class="w-full rounded-xl border border-gray-200 bg-[#fafaf7] px-4 py-3 text-sm outline-none focus:border-[#315d4c] focus:ring-2 focus:ring-[#315d4c]/10">
+
+                                        <option value="">Choose your destination</option>
+                                        <option value="Switzerland">Switzerland 🇨🇭</option>
+                                        <option value="Greece">Greece 🇬🇷</option>
+                                        <option value="Maldives">Maldives 🇲🇻</option>
+                                        <option value="Dubai">Dubai 🇦🇪</option>
+                                        <option value="Bali">Bali, Indonesia 🇮🇩</option>
+                                        <option value="Singapore">Singapore 🇸🇬</option>
+                                        <option value="Other">Other Destination</option>
+
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="departure" class="mb-2 block text-sm font-semibold text-gray-700">
+                                        Departure Date *
+                                    </label>
+                                    <input type="date" id="departure" name="departure" required
+                                        class="w-full rounded-xl border border-gray-200 bg-[#fafaf7] px-4 py-3 text-sm outline-none focus:border-[#315d4c] focus:ring-2 focus:ring-[#315d4c]/10">
+                                </div>
+
+                                <div>
+                                    <label for="returnDate" class="mb-2 block text-sm font-semibold text-gray-700">
+                                        Return Date *
+                                    </label>
+                                    <input type="date" id="returnDate" name="returnDate" required
+                                        class="w-full rounded-xl border border-gray-200 bg-[#fafaf7] px-4 py-3 text-sm outline-none focus:border-[#315d4c] focus:ring-2 focus:ring-[#315d4c]/10">
+                                </div>
+
+                                <div>
+                                    <label for="adults" class="mb-2 block text-sm font-semibold text-gray-700">
+                                        Adults *
+                                    </label>
+                                    <select id="adults" name="adults" required
+                                        class="w-full rounded-xl border border-gray-200 bg-[#fafaf7] px-4 py-3 text-sm outline-none focus:border-[#315d4c]">
+                                        <option value="1">1 Adult</option>
+                                        <option value="2" selected>2 Adults</option>
+                                        <option value="3">3 Adults</option>
+                                        <option value="4">4 Adults</option>
+                                        <option value="5">5 Adults</option>
+                                        <option value="6">6+ Adults</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="children" class="mb-2 block text-sm font-semibold text-gray-700">
+                                        Children
+                                    </label>
+                                    <select id="children" name="children"
+                                        class="w-full rounded-xl border border-gray-200 bg-[#fafaf7] px-4 py-3 text-sm outline-none focus:border-[#315d4c]">
+                                        <option value="0">No Children</option>
+                                        <option value="1">1 Child</option>
+                                        <option value="2">2 Children</option>
+                                        <option value="3">3 Children</option>
+                                        <option value="4">4+ Children</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Package Preferences -->
+                        <div>
+                            <h3
+                                class="mb-4 border-b border-gray-100 pb-3 text-sm font-bold uppercase tracking-wider text-[#315d4c]">
+                                03. Package Preferences
+                            </h3>
+
+                            <div class="grid gap-5 sm:grid-cols-2">
+
+                                <div>
+                                    <label for="package" class="mb-2 block text-sm font-semibold text-gray-700">
+                                        Travel Package *
+                                    </label>
+                                    <select id="package" name="package" required
+                                        class="w-full rounded-xl border border-gray-200 bg-[#fafaf7] px-4 py-3 text-sm outline-none focus:border-[#315d4c]">
+                                        <option value="">Select package</option>
+                                        <option value="Family">Family Trip</option>
+                                        <option value="Honeymoon">Honeymoon</option>
+                                        <option value="Budget">Budget Trip</option>
+                                        <option value="Adventure">Adventure Trip</option>
+                                        <option value="Luxury">Luxury Trip</option>
+                                        <option value="Solo">Solo Travel</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="budget" class="mb-2 block text-sm font-semibold text-gray-700">
+                                        Budget per Person (USD) *
+                                    </label>
+
+                                    <select id="budget" name="budget" required
+                                        class="w-full rounded-xl border border-gray-200 bg-[#fafaf7] px-4 py-3 text-sm outline-none focus:border-[#315d4c]">
+
+                                        <option value="">Choose your budget</option>
+                                        <option value="Below $200">Below $200</option>
+                                        <option value="$200-$500">$200 – $500</option>
+                                        <option value="$500-$1000">$500 – $1,000</option>
+                                        <option value="$1000-$2000">$1,000 – $2,000</option>
+                                        <option value="$2000-$5000">$2,000 – $5,000</option>
+                                        <option value="Above $5000">Above $5,000</option>
+
+                                    </select>
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label for="requests" class="mb-2 block text-sm font-semibold text-gray-700">
+                                        Special Requests
+                                    </label>
+                                    <textarea id="requests" name="requests" rows="3"
+                                        placeholder="Hotel preferences, activities, or anything else..."
+                                        class="w-full rounded-xl border border-gray-200 bg-[#fafaf7] px-4 py-3 text-sm outline-none focus:border-[#315d4c] focus:ring-2 focus:ring-[#315d4c]/10"></textarea>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Submit -->
+                        <div class="border-t border-gray-100 pt-6">
+
+                            <label class="mb-5 flex items-start gap-3 text-sm leading-6 text-gray-500">
+                                <input type="checkbox" required class="mt-1 h-4 w-4 accent-[#315d4c]">
+                                <span>
+                                    I confirm that the details provided above are correct.
+                                </span>
+                            </label>
+
+                            <button type="submit"
+                                class="w-full rounded-xl bg-[#214b3b] px-6 py-4 font-bold text-white transition hover:bg-[#315d4c]">
+                                Submit Booking Request →
+                            </button>
+
+                            <p class="mt-4 text-center text-xs leading-5 text-gray-400">
+                                Your trip request is not confirmed until the booking is reviewed.
+                            </p>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </section>
+        ```html
+        <!-- Travel Tips Before You Book -->
+        <section class="bg-[#f5f4ee] px-5 py-16 md:py-24">
+
+            <div class="mx-auto max-w-6xl">
+
+                <!-- Section Heading -->
+                <div class="mb-12 text-center">
+
+                    <span class="mb-4 inline-block rounded-full bg-[#e5eadf] px-4 py-2
+                         text-xs font-bold uppercase tracking-[3px] text-[#315d4c]">
+                        Travel Smarter
+                    </span>
+
+                    <h2 class="mb-5 text-3xl font-bold leading-tight text-[#214b3b]
+                       sm:text-4xl md:text-5xl" style="font-family: 'Playfair Display', serif;">
+                        Travel Tips Before You Book
+                    </h2>
+
+                    <p class="mx-auto max-w-2xl text-sm leading-7 text-gray-600 md:text-base">
+                        A little planning goes a long way. Keep these essential travel
+                        tips in mind before setting off on your next unforgettable adventure.
+                    </p>
+
+                </div>
+
+
+                <!-- Travel Tips Grid -->
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+                    <!-- Tip 1 -->
+                    <div class="group rounded-2xl border border-[#e8e7de] bg-white p-7
+                        transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="mb-6 flex h-14 w-14 items-center justify-center
+                            rounded-2xl bg-[#eaf0e8] text-[#315d4c]
+                            transition group-hover:bg-[#214b3b] group-hover:text-white">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" />
+                                <path d="M8 7h8" />
+                                <path d="M8 11h6" />
+                            </svg>
+
+                        </div>
+
+                        <p class="mb-3 text-xs font-bold uppercase tracking-widest text-[#a47746]">
+                            01 / Essentials
+                        </p>
+
+                        <h3 class="mb-3 text-xl font-bold text-[#214b3b]">
+                            Passport & Visa
+                        </h3>
+
+                        <p class="text-sm leading-7 text-gray-500">
+                            Check passport validity, visa requirements and entry
+                            regulations for your chosen destination before booking.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Tip 2 -->
+                    <div class="group rounded-2xl border border-[#e8e7de] bg-white p-7
+                        transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="mb-6 flex h-14 w-14 items-center justify-center
+                            rounded-2xl bg-[#f7eddf] text-[#a47746]
+                            transition group-hover:bg-[#a47746] group-hover:text-white">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="17" rx="2" />
+                                <path d="M16 2v4" />
+                                <path d="M8 2v4" />
+                                <path d="M3 10h18" />
+                                <path d="m9 15 2 2 4-4" />
+                            </svg>
+
+                        </div>
+
+                        <p class="mb-3 text-xs font-bold uppercase tracking-widest text-[#a47746]">
+                            02 / Timing
+                        </p>
+
+                        <h3 class="mb-3 text-xl font-bold text-[#214b3b]">
+                            Best Time to Travel
+                        </h3>
+
+                        <p class="text-sm leading-7 text-gray-500">
+                            Research seasonal weather, local festivals and peak
+                            tourist periods to choose the right time for your trip.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Tip 3 -->
+                    <div class="group rounded-2xl border border-[#e8e7de] bg-white p-7
+                        transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="mb-6 flex h-14 w-14 items-center justify-center
+                            rounded-2xl bg-[#eaf0e8] text-[#315d4c]
+                            transition group-hover:bg-[#214b3b] group-hover:text-white">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="5" width="20" height="14" rx="2" />
+                                <path d="M2 10h20" />
+                                <path d="M6 15h4" />
+                            </svg>
+
+                        </div>
+
+                        <p class="mb-3 text-xs font-bold uppercase tracking-widest text-[#a47746]">
+                            03 / Finances
+                        </p>
+
+                        <h3 class="mb-3 text-xl font-bold text-[#214b3b]">
+                            Plan Your Budget
+                        </h3>
+
+                        <p class="text-sm leading-7 text-gray-500">
+                            Consider accommodation, meals, local transport and
+                            activities. Keep extra funds for unexpected expenses.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Tip 4 -->
+                    <div class="group rounded-2xl border border-[#e8e7de] bg-white p-7
+                        transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="mb-6 flex h-14 w-14 items-center justify-center
+                            rounded-2xl bg-[#f7eddf] text-[#a47746]
+                            transition group-hover:bg-[#a47746] group-hover:text-white">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z" />
+                                <path d="m9 12 2 2 4-4" />
+                            </svg>
+
+                        </div>
+
+                        <p class="mb-3 text-xs font-bold uppercase tracking-widest text-[#a47746]">
+                            04 / Protection
+                        </p>
+
+                        <h3 class="mb-3 text-xl font-bold text-[#214b3b]">
+                            Travel Insurance
+                        </h3>
+
+                        <p class="text-sm leading-7 text-gray-500">
+                            Consider suitable travel insurance for medical emergencies,
+                            trip interruptions, baggage loss and unexpected delays.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Bottom Note -->
+                <div class="mt-10 flex flex-col items-start gap-4 rounded-2xl
+                    border border-[#dce4d8] bg-[#eaf0e8] p-6 sm:flex-row
+                    sm:items-center sm:p-8">
+
+                    <div class="flex h-12 w-12 shrink-0 items-center justify-center
+                        rounded-full bg-white text-2xl">
+                        ✦
+                    </div>
+
+                    <div>
+                        <h3 class="mb-2 text-lg font-bold text-[#214b3b]">
+                            A little preparation makes a big difference.
+                        </h3>
+
+                        <p class="text-sm leading-7 text-gray-600">
+                            Review your travel documents, check booking conditions
+                            and understand cancellation policies before confirming
+                            your international holiday.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <footer class="bg-black">
+            <div class=" mx-auto px-5 py-5">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-10">
+                    <div>
+                        <img src="image/zestlogoo.png" class="w-40 mb-4">
+                        <p class="text-gray-300 leading-7 text-sm">
+                            Explore more. Live more.
+                            Let us take you to the most beautiful
+                            places on Earth.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Quick Links</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li><a href="index.html" class="hover:text-teal-600">Home</a></li>
+                            <li><a href="about.html" class="hover:text-teal-600">About Us</a></li>
+                            <li><a href="destination.html" class="hover:text-teal-600">Destinations</a></li>
+                            <li><a href="packages.html" class="hover:text-teal-600">Packages</a></li>
+                            <li><a href="contact.html" class="hover:text-teal-600">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Top Destinations</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>Bali</li>
+                            <li>Canada</li>
+                            <li>Mexico</li>
+                            <li>Maldives</li>
+                            <li>Switzerland</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Support</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>FAQs</li>
+                            <li>Privacy Policy</li>
+                            <li>Terms & Conditions</li>
+                            <li>Refund Policy</li>
+                            <li>Travel Insurance</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Contact Us</h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex gap-3">
+                                📞
+                                <span>+91 87787 38692</span>
+                            </li>
+                            <li class="flex gap-3">
+                                📧
+                                <span>info@zestaexplorer.com</span>
+                            </li>
+                            <li class="flex gap-3">
+                                📍
+                                <span>123, Travel Street,<br>Chennai - 600001</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm">
+                    © 2026 Zesta Explorer. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+</body>
+
+</html>

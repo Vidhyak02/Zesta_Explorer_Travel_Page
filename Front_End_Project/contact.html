@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZESTA EXPLORER</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <section>
+
+        <!--Nav Bar-->
+        <nav class="bg-white fixed shadow-lg w-full z-50">
+            <div class="max-w-6xl flex items-center justify-between">
+                <img src="image/zestlogo.png" class="h-15 w-20 mx-10 my-5">
+                <!-- Desktop Nav Links (hidden on mobile) -->
+                <div class="hidden md:flex space-x-10 text-gray-600 font-medium">
+                    <a href="index.html" class="hover:text-teal-600">HOME</a></li>
+                    <a href="about.html" class="hover:text-teal-600">ABOUT US</a></li>
+                    <div class="relative group">
+                        <a href="destination.html"
+                            class=" hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            DESTINATIONS
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="asia.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Asia</a>
+                            <a href="europe.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Europe</a>
+                            <a href="northamerica.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">North
+                                America</a>
+                            <a href="others.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Others</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="packages.html"
+                            class="hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            PACKAGES
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="family.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Family</a>
+                            <a href="honeymoon.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Honeymoon</a>
+                            <a href="budget.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Budget</a>
+                            <a href="adventure.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Adventure</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="luxury.html"
+                            class=" hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            LUXURY ESCAPES
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="stays.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Luxury
+                                Stays</a>
+                            <a href="island.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Private
+                                Island</a>
+                            <a href="cruise.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Luxury
+                                Cruise</a>
+                            <a href="royal.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Royal
+                                Retreats</a>
+                        </div>
+
+                    </div>
+                    <a href="contact.html" class="hover:text-teal-600">CONTACT US</a>
+                </div>
+
+                <!-- Desktop Button -->
+                <a href="booking.html"
+                    class="absolute hidden md:block bg-teal-600 text-white px-4 py-2 right-10  rounded-lg hover:bg-teal-500">
+                    Book Now
+                </a>
+                <label for="menuToggle" class="md:hidden flex flex-col space-y-1.5 mx-10 cursor-pointer">
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                </label>
+
+            </div>
+
+            <input type="checkbox" id="menuToggle" class="hidden peer" />
+            <div class="hidden peer-checked:block md:hidden bg-white px-6 pb-4">
+                <ul class="flex flex-col space-y-3 text-gray-600 font-medium">
+                    <li><a href="index.html" class="block hover:text-teal-600">HOME</a></li>
+                    <li><a href="about.html" class="block hover:text-teal-600">ABOUT US</a></li>
+                    <li><a href="destination.html" class="block hover:text-teal-600">DESTINATIONS</a></li>
+                    <li><a href="packages.html" class="block hover:text-teal-600">PACKAGES</a></li>
+                    <li><a href="luxury.html" class="block hover:text-teal-600">LUXURY</a></li>
+                    <li><a href="contact.html" class="block hover:text-teal-600">CONTACT US</a></li>
+                </ul>
+                <a href="booking.html"
+                    class="mt-4 inline-block bg-teal-700 text-white px-4 py-2 rounded-lg hover:bg-teal-600">
+                    Book Now
+                </a>
+            </div>
+        </nav>
+
+        <body class="bg-slate-50 text-slate-900">
+
+            <!-- 1. HERO SECTION -->
+            <section>
+                <div class="relative max-w-full h-[700px] rounded-[30px] overflow-hidden flex items-center">
+                    <img src="https://plus.unsplash.com/premium_photo-1670179694028-a74b92f49857?q=80&w=870&auto=format&fit=crop"
+                        alt="Travel" class="absolute inset-0 w-full h-full object-cover">
+
+                    <div class="relative z-10 px-8 md:px-14 lg:px-16 py-20 max-w-3xl text-white">
+                        <p class="uppercase tracking-[4px] text-xs text-teal-200 font-semibold">Contact Zesta Explorer
+                        </p>
+                        <h1 class="font-serif text-5xl md:text-6xl font-semibold leading-tight mt-5">
+                            Let's Plan Your
+                            <br>
+                            <span class="text-teal-200">Next Journey.</span>
+                        </h1>
+                        <p class="text-white text-base md:text-lg leading-8 max-w-xl mt-6">
+                            Have a destination in mind? Tell us what you're dreaming of and let our travel experts help
+                            turn it into an unforgettable journey.
+                        </p>
+                        <a href="#contact-form"
+                            class="inline-block mt-8 bg-teal-600 hover:bg-teal-700 text-white px-7 py-3.5 rounded-xl font-semibold transition">
+                            Start A Conversation
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. OPENING HOURS SECTION -->
+            <section class="px-5 md:px-10 lg:px-20 py-16 bg-white">
+                <div class="max-w-6xl mx-auto">
+                    <div class="border-t border-slate-200 pt-12">
+                        <h2 class="font-serif text-4xl md:text-5xl font-semibold text-teal-900">
+                            Opening Hours
+                        </h2>
+
+                        <p class="text-slate-600 text-sm md:text-base leading-7 mt-5 max-w-3xl">
+                            Our travel experts are available during the following hours to help you plan your next
+                            unforgettable journey.
+                            <br>
+                            The time is currently
+                            <span class="font-semibold text-slate-900">11:00 AM</span>
+                            in India.
+                        </p>
+
+                        <div class="mt-7 max-w-2xl space-y-3">
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-slate-100 px-5 py-4 text-slate-700 text-sm md:text-base">
+                                    Monday - Thursday
+                                </div>
+                                <div class="bg-slate-100 px-5 py-4 text-slate-700 text-sm md:text-base">
+                                    9:00 AM - 7:00 PM
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-slate-100 px-5 py-4 text-slate-700 text-sm md:text-base">
+                                    Friday
+                                </div>
+                                <div class="bg-slate-100 px-5 py-4 text-slate-700 text-sm md:text-base">
+                                    9:00 AM - 5:30 PM
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-slate-100 px-5 py-4 text-slate-700 text-sm md:text-base">
+                                    Saturday - Sunday
+                                </div>
+                                <div class="bg-slate-100 px-5 py-4 text-slate-700 text-sm md:text-base">
+                                    9:00 AM - 5:00 PM
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-slate-200 mt-16"></div>
+                </div>
+            </section>
+
+            <!-- 3. HOW TO USE OUR SERVICE -->
+            <section class="px-5 md:px-10 lg:px-20 py-12 bg-teal-800">
+                <div class="max-w-6xl mx-auto border-t border-b border-slate-200 py-10">
+                    <h2 class="font-serif text-3xl md:text-4xl font-semibold text-white mb-8">
+                        How To Use Our Service
+                    </h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                        <div class="text-center">
+                            <div
+                                class="w-24 h-24 mx-auto rounded-full border-4 border-slate-200 flex items-center justify-center text-3xl text-white">
+                                🌴
+                            </div>
+                            <div class="mt-6 text-sm md:text-base leading-6 text-white">
+                                <span class="font-bold text-white">1.</span>
+                                Browse our website for
+                                <br>
+                                inspiring destinations and
+                                <br>
+                                travel experiences
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-24 h-24 mx-auto rounded-full border-4 border-slate-200 flex items-center justify-center text-3xl text-white">
+                                🎧
+                            </div>
+                            <div class="mt-6 text-sm md:text-base leading-6 text-white">
+                                <span class="font-bold text-white">2.</span>
+                                Contact our travel experts
+                                <br>
+                                and share your holiday
+                                <br>
+                                preferences with us
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <div
+                                class="w-24 h-24 mx-auto rounded-full border-4 border-slate-200 flex items-center justify-center text-3xl text-white">
+                                ✈️
+                            </div>
+                            <div class="mt-6 text-sm md:text-base leading-6 text-white">
+                                <span class="font-bold text-white">3.</span>
+                                Receive your personalized
+                                <br>
+                                travel plan and start
+                                <br>
+                                your unforgettable journey
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. CONTACT FORM -->
+            <section id="contact-form" class="px-5 md:px-10 lg:px-20 py-20 bg-slate-50">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid lg:grid-cols-5 gap-10 items-start">
+                        <div class="lg:col-span-2 lg:sticky lg:top-10">
+                            <p class="uppercase tracking-[4px] text-xs text-teal-600 font-semibold">Send An Enquiry</p>
+                            <h2 class="font-serif text-4xl md:text-5xl font-semibold mt-3">
+                                Tell Us About
+                                Your Trip
+                            </h2>
+                            <p class="text-slate-500 leading-7 mt-5">
+                                Share a few details about your travel plans. Our team will get back to you with ideas
+                                tailored to your journey.
+                            </p>
+
+                            <div class="mt-8 space-y-5">
+                                <div class="flex gap-4">
+                                    <span class="text-xl">✨</span>
+                                    <div>
+                                        <h4 class="font-semibold">Personalized Planning</h4>
+                                        <p class="text-sm text-slate-500 mt-1">Trips designed around your preferences.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-4">
+                                    <span class="text-xl">🌍</span>
+                                    <div>
+                                        <h4 class="font-semibold">Global Destinations</h4>
+                                        <p class="text-sm text-slate-500 mt-1">Explore destinations across the world.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-3 bg-white rounded-3xl p-7 md:p-10 shadow-sm">
+                            <form>
+                                <div class="grid md:grid-cols-2 gap-5">
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-2">Full Name</label>
+                                        <input type="text" placeholder="Your name"
+                                            class="w-full border border-slate-200 rounded-xl px-4 py-3.5 outline-none focus:border-teal-600 transition">
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-2">Email Address</label>
+                                        <input type="email" placeholder="you@example.com"
+                                            class="w-full border border-slate-200 rounded-xl px-4 py-3.5 outline-none focus:border-teal-600 transition">
+                                    </div>
+                                </div>
+
+                                <div class="grid md:grid-cols-2 gap-5 mt-5">
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-2">Phone Number</label>
+                                        <input type="tel" placeholder="+91 XXXXX XXXXX"
+                                            class="w-full border border-slate-200 rounded-xl px-4 py-3.5 outline-none focus:border-teal-600 transition">
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-2">Destination</label>
+                                        <input type="text" placeholder="Where do you want to go?"
+                                            class="w-full border border-slate-200 rounded-xl px-4 py-3.5 outline-none focus:border-teal-600 transition">
+                                    </div>
+                                </div>
+
+                                <div class="mt-5">
+                                    <label class="block text-sm font-semibold mb-2">Travel Type</label>
+                                    <select
+                                        class="w-full border border-slate-200 rounded-xl px-4 py-3.5 outline-none focus:border-teal-600 bg-white">
+                                        <option value="">Select travel type</option>
+                                        <option>Family</option>
+                                        <option>Honeymoon</option>
+                                        <option>Budget</option>
+                                        <option>Adventure</option>
+                                        <option>Luxury</option>
+                                        <option>Solo</option>
+                                    </select>
+                                </div>
+
+                                <div class="mt-5">
+                                    <label class="block text-sm font-semibold mb-2">Message</label>
+                                    <textarea rows="5" placeholder="Tell us about your dream trip..."
+                                        class="w-full border border-slate-200 rounded-xl px-4 py-3.5 outline-none resize-none focus:border-teal-600 transition"></textarea>
+                                </div>
+
+                                <button type="submit"
+                                    class="w-full mt-6 bg-teal-700 hover:bg-teal-800 text-white py-4 rounded-xl font-semibold transition">
+                                    Send Enquiry
+                                    <span class="ml-2">→</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. WHY CONTACT ZESTA -->
+            <section class="px-5 md:px-10 lg:px-20 py-20 bg-gray-200">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-12">
+                        <p class="uppercase tracking-[4px] text-xs text-teal-600 font-semibold">Why Zesta Explorer?</p>
+                        <h2 class="font-serif text-4xl md:text-5xl font-semibold mt-3">
+                            More Than Just A
+                            Travel Agency
+                        </h2>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                        <div
+                            class="border border-slate-100 rounded-2xl p-7 hover:shadow-lg hover:-translate-y-1 transition">
+                            <span class="text-3xl">✨</span>
+                            <h3 class="font-semibold text-lg mt-5">Personalized Planning</h3>
+                            <p class="text-sm text-slate-500 leading-6 mt-3">
+                                Every itinerary is designed around your travel style, interests and expectations.
+                            </p>
+                        </div>
+
+                        <div
+                            class="border border-slate-100 rounded-2xl p-7 hover:shadow-lg hover:-translate-y-1 transition">
+                            <span class="text-3xl">🧭</span>
+                            <h3 class="font-semibold text-lg mt-5">Expert Guidance</h3>
+                            <p class="text-sm text-slate-500 leading-6 mt-3">
+                                Get helpful recommendations from travel experts who know the destinations.
+                            </p>
+                        </div>
+
+                        <div
+                            class="border border-slate-100 rounded-2xl p-7 hover:shadow-lg hover:-translate-y-1 transition">
+                            <span class="text-3xl">⚡</span>
+                            <h3 class="font-semibold text-lg mt-5">Quick Response</h3>
+                            <p class="text-sm text-slate-500 leading-6 mt-3">
+                                Have a question? Our team aims to respond quickly to every enquiry.
+                            </p>
+                        </div>
+
+                        <div
+                            class="border border-slate-100 rounded-2xl p-7 hover:shadow-lg hover:-translate-y-1 transition">
+                            <span class="text-3xl">🌍</span>
+                            <h3 class="font-semibold text-lg mt-5">Tailored Experiences</h3>
+                            <p class="text-sm text-slate-500 leading-6 mt-3">
+                                From budget escapes to luxury holidays, find an experience made for you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. MAP / FIND US -->
+            <section class="px-5 md:px-10 lg:px-20 py-20 bg-slate-50">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+                        <div class="relative min-h-[450px] rounded-3xl overflow-hidden bg-[#dce8e5]">
+                            <div class="absolute inset-0 opacity-40">
+                                <div class="absolute w-[500px] h-px bg-slate-400 rotate-12 top-32 left-[-50px]"></div>
+                                <div class="absolute w-[600px] h-px bg-slate-400 -rotate-12 top-64 left-[-100px]"></div>
+                                <div class="absolute w-[500px] h-px bg-slate-400 rotate-45 top-20 left-40"></div>
+                                <div class="absolute w-[500px] h-px bg-slate-400 -rotate-45 top-80 left-20"></div>
+                            </div>
+
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div
+                                        class="w-16 h-16 rounded-full bg-teal-700 text-white flex items-center justify-center text-2xl mx-auto shadow-xl">
+                                        📍
+                                    </div>
+                                    <div class="bg-white rounded-xl shadow-lg px-5 py-3 mt-4">
+                                        <p class="font-semibold">Zesta Explorer</p>
+                                        <p class="text-xs text-slate-500 mt-1">Chennai, Tamil Nadu</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-3xl p-8 md:p-12 flex flex-col justify-center">
+                            <p class="uppercase tracking-[4px] text-xs text-teal-600 font-semibold">Find Us</p>
+                            <h2 class="font-serif text-4xl font-semibold mt-3">Visit Our Office</h2>
+                            <p class="text-slate-500 leading-7 mt-5">
+                                We'd love to meet you, hear about your travel dreams and help you plan your next
+                                adventure.
+                            </p>
+
+                            <div class="mt-8 space-y-5">
+                                <div class="flex gap-4">
+                                    <span class="text-xl">📍</span>
+                                    <div>
+                                        <p class="font-semibold">Address</p>
+                                        <p class="text-sm text-slate-500 mt-1">
+                                            24 Explorer Avenue, Chennai, Tamil Nadu – 629001, India.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-4">
+                                    <span class="text-xl">📞</span>
+                                    <div>
+                                        <p class="font-semibold">Phone</p>
+                                        <p class="text-sm text-slate-500 mt-1">+91 87787 38692</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#"
+                                class="inline-block w-fit mt-8 bg-slate-900 hover:bg-teal-700 text-white px-7 py-3.5 rounded-xl font-semibold transition">
+                                Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. FAQ -->
+            <section class="px-5 md:px-10 lg:px-20 py-20 bg-blue-50">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <p class="uppercase tracking-[4px] text-xs text-teal-600 font-semibold">Need To Know?</p>
+                        <h2 class="font-serif text-4xl md:text-5xl font-semibold mt-3">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="space-y-4">
+                        <details class="group border border-slate-200 rounded-2xl p-6">
+                            <summary class="flex items-center justify-between cursor-pointer font-semibold">
+                                How do I book a trip?
+                                <span class="text-teal-600 text-xl group-open:rotate-45 transition">+</span>
+                            </summary>
+                            <p class="text-slate-500 text-sm leading-7 mt-4 pr-8">
+                                Simply send us an enquiry through the contact form. Our travel team will discuss your
+                                requirements and guide you through the booking process.
+                            </p>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-2xl p-6">
+                            <summary class="flex items-center justify-between cursor-pointer font-semibold">
+                                Can I customize a package?
+                                <span class="text-teal-600 text-xl group-open:rotate-45 transition">+</span>
+                            </summary>
+                            <p class="text-slate-500 text-sm leading-7 mt-4 pr-8">
+                                Yes. Our packages can be tailored based on your preferred destinations, duration,
+                                activities and travel style.
+                            </p>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-2xl p-6">
+                            <summary class="flex items-center justify-between cursor-pointer font-semibold">
+                                What payment options are available?
+                                <span class="text-teal-600 text-xl group-open:rotate-45 transition">+</span>
+                            </summary>
+                            <p class="text-slate-500 text-sm leading-7 mt-4 pr-8">
+                                Payment options can include online payment and bank transfer. The available options will
+                                be confirmed during booking.
+                            </p>
+                        </details>
+
+                        <details class="group border border-slate-200 rounded-2xl p-6">
+                            <summary class="flex items-center justify-between cursor-pointer font-semibold">
+                                Can I change my travel dates?
+                                <span class="text-teal-600 text-xl group-open:rotate-45 transition">+</span>
+                            </summary>
+                            <p class="text-slate-500 text-sm leading-7 mt-4 pr-8">
+                                Date changes may be possible depending on your booking and the policies of airlines,
+                                hotels and other travel partners. Contact us before making changes.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. FINAL CTA -->
+            <section class="px-5 md:px-10 lg:px-20 pb-20">
+                <div
+                    class="relative max-w-7xl mx-auto overflow-hidden rounded-[30px] bg-teal-800 px-8 md:px-16 py-20 text-center">
+                    <div class="absolute -top-32 -right-20 w-80 h-80 rounded-full bg-teal-700/50"></div>
+                    <div class="absolute -bottom-36 -left-20 w-96 h-96 rounded-full bg-teal-900/40"></div>
+
+                    <div class="relative z-10 max-w-3xl mx-auto">
+                        <p class="uppercase tracking-[4px] text-xs text-teal-200 font-semibold">Your Next Chapter Awaits
+                        </p>
+                        <h2 class="font-serif text-4xl md:text-6xl text-white font-semibold leading-tight mt-4">
+                            Your Journey Starts
+                            <br>
+                            <span class="text-teal-200">With A Conversation.</span>
+                        </h2>
+                        <p class="text-white/70 leading-7 max-w-xl mx-auto mt-6">
+                            Tell us where you want to go. We'll help you plan the rest.
+                        </p>
+                        <a href="#contact-form"
+                            class="inline-block mt-8 bg-white hover:bg-teal-50 text-teal-800 px-8 py-4 rounded-xl font-semibold transition">
+                            Start Planning →
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. FOOTER -->
+            <footer class="bg-black">
+                <div class="mx-auto px-5 py-5">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-10">
+                        <div>
+                            <img src="image/zestlogoo.png" class="w-40 mb-4">
+                            <p class="text-gray-300 leading-7 text-sm">
+                                Explore more. Live more. Let us take you to the most beautiful places on Earth.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl text-teal-700 font-bold mb-5">Quick Links</h3>
+                            <ul class="space-y-3 text-gray-300">
+                                <li><a href="index.html" class="hover:text-teal-600">Home</a></li>
+                                <li><a href="about.html" class="hover:text-teal-600">About Us</a></li>
+                                <li><a href="destination.html" class="hover:text-teal-600">Destinations</a></li>
+                                <li><a href="packages.html" class="hover:text-teal-600">Packages</a></li>
+                                <li><a href="contact.html" class="hover:text-teal-600">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl text-teal-700 font-bold mb-5">Top Destinations</h3>
+                            <ul class="space-y-3 text-gray-300">
+                                <li>Bali</li>
+                                <li>Canada</li>
+                                <li>Mexico</li>
+                                <li>Maldives</li>
+                                <li>Switzerland</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl text-teal-700 font-bold mb-5">Support</h3>
+                            <ul class="space-y-3 text-gray-300">
+                                <li>FAQs</li>
+                                <li>Privacy Policy</li>
+                                <li>Terms & Conditions</li>
+                                <li>Refund Policy</li>
+                                <li>Travel Insurance</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl text-teal-700 font-bold mb-5">Contact Us</h3>
+                            <ul class="space-y-4 text-gray-300">
+                                <li class="flex gap-3">📞 <span>+91 87787 38692</span></li>
+                                <li class="flex gap-3">📧 <span>info@zestaexplorer.com</span></li>
+                                <li class="flex gap-3">📍 <span>123, Travel Street,<br>Chennai - 600001</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-300 text-sm">© 2026 Zesta Explorer. All Rights Reserved.</p>
+                </div>
+            </footer>
+
+        </body>
+
+</html>

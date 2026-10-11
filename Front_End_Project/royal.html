@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZESTA EXPLORER</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <section>
+
+        <!--Nav Bar-->
+        <nav class="bg-white fixed shadow-lg w-full z-50">
+            <div class="max-w-6xl flex items-center justify-between">
+                <img src="image/zestlogo.png" class="h-15 w-20 mx-10 my-5">
+                <!-- Desktop Nav Links (hidden on mobile) -->
+                <div class="hidden md:flex space-x-10 text-gray-600 font-medium">
+                    <a href="index.html" class="hover:text-teal-600">HOME</a></li>
+                    <a href="about.html" class="hover:text-teal-600">ABOUT US</a></li>
+                    <div class="relative group">
+                        <a href="destination.html"
+                            class=" hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            DESTINATIONS
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="asia.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Asia</a>
+                            <a href="europe.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Europe</a>
+                            <a href="northamerica.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">North
+                                America</a>
+                            <a href="others.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Others</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="packages.html"
+                            class="hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            PACKAGES
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="family.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Family</a>
+                            <a href="honeymoon.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Honeymoon</a>
+                            <a href="budget.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Budget</a>
+                            <a href="adventure.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Adventure</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="luxury.html"
+                            class=" hover:text-teal-600 transition duration-500 flex items-center gap-1">
+                            LUXURY ESCAPES
+                            <span class="inline-block transition duration-200 group-hover:translate-y-0.5">▾</span>
+                        </a>
+
+
+                        <div class="absolute left-0 top-full mt-5 w-44 bg-teal-800 border border-[#3D5A3D]
+							rounded-lg overflow-hidden opacity-0 invisible
+							group-hover:opacity-100 group-hover:visible
+							transition-all duration-150 ease-out z-50">
+                            <a href="stays.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Luxury
+                                Stays</a>
+                            <a href="island.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Private
+                                Island</a>
+                            <a href="cruise.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Luxury
+                                Cruise</a>
+                            <a href="royal.html"
+                                class="block uppercase px-4 py-2 text-base text-white hover:bg-teal-700 transition duration-150">Royal
+                                Retreats</a>
+                        </div>
+
+                    </div>
+                    <a href="contact.html" class="hover:text-teal-600">CONTACT US</a>
+                </div>
+
+                <!-- Desktop Button -->
+                <a href="booking.html"
+                    class="absolute hidden md:block bg-teal-600 text-white px-4 py-2 right-10  rounded-lg hover:bg-teal-500">
+                    Book Now
+                </a>
+                <label for="menuToggle" class="md:hidden flex flex-col space-y-1.5 mx-10 cursor-pointer">
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                </label>
+
+            </div>
+
+            <input type="checkbox" id="menuToggle" class="hidden peer" />
+            <div class="hidden peer-checked:block md:hidden bg-white px-6 pb-4">
+                <ul class="flex flex-col space-y-3 text-gray-600 font-medium">
+                    <li><a href="index.html" class="block hover:text-teal-600">HOME</a></li>
+                    <li><a href="about.html" class="block hover:text-teal-600">ABOUT US</a></li>
+                    <li><a href="destination.html" class="block hover:text-teal-600">DESTINATIONS</a></li>
+                    <li><a href="packages.html" class="block hover:text-teal-600">PACKAGES</a></li>
+                    <li><a href="luxury.html" class="block hover:text-teal-600">LUXURY</a></li>
+                    <li><a href="contact.html" class="block hover:text-teal-600">CONTACT US</a></li>
+                </ul>
+                <a href="booking.html"
+                    class="mt-4 inline-block bg-teal-700 text-white px-4 py-2 rounded-lg hover:bg-teal-600">
+                    Book Now
+                </a>
+            </div>
+        </nav>
+        ```html
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <title>Royal Retreats | Zesta Explorer</title>
+
+            <script src="https://cdn.tailwindcss.com"></script>
+
+            <link
+                href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+                rel="stylesheet">
+
+            <style>
+                * {
+                    box-sizing: border-box;
+                }
+
+                html {
+                    scroll-behavior: smooth;
+                }
+
+                body {
+                    margin: 0;
+                    font-family: 'DM Sans', sans-serif;
+                    background: #F8FAF9;
+                    color: #243B3A;
+                }
+
+                .royal-page {
+                    --teal: #0F766E;
+                    --dark-teal: #134E4A;
+                    --gold: #C6A66A;
+                    --cream: #F8FAF9;
+                }
+
+                .royal-page h1,
+                .royal-page h2,
+                .royal-page h3 {
+                    font-family: 'Playfair Display', serif;
+                }
+
+                /* SECTION 1: HERO */
+
+                .royal-hero {
+                    background:
+                        linear-gradient(90deg,
+                            rgba(10, 54, 51, 0.88),
+                            rgba(10, 54, 51, 0.35)),
+                        url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85');
+
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                .gold-text {
+                    color: var(--gold);
+                }
+
+                .section-label {
+                    color: var(--teal);
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    font-size: 11px;
+                    font-weight: 700;
+                }
+
+                .royal-btn {
+                    display: inline-block;
+                    padding: 14px 25px;
+                    background: var(--teal);
+                    color: white;
+                    font-size: 12px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    transition: .3s ease;
+                }
+
+                .royal-btn:hover {
+                    background: var(--dark-teal);
+                    transform: translateY(-2px);
+                }
+
+                .outline-btn {
+                    display: inline-block;
+                    padding: 13px 24px;
+                    border: 1px solid rgba(255, 255, 255, .7);
+                    color: white;
+                    font-size: 12px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    transition: .3s ease;
+                }
+
+                .outline-btn:hover {
+                    background: white;
+                    color: var(--teal);
+                }
+
+                /* SECTION 3: RETREAT CARDS */
+
+                .retreat-card {
+                    background: white;
+                    border: 1px solid #DCEAE7;
+                    transition: .35s ease;
+                }
+
+                .retreat-card:hover {
+                    transform: translateY(-7px);
+                    box-shadow: 0 18px 35px rgba(19, 78, 74, .12);
+                }
+
+                .image-wrap {
+                    overflow: hidden;
+                    position: relative;
+                }
+
+                .retreat-image {
+                    height: 260px;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: transform .5s ease;
+                }
+
+                .retreat-card:hover .retreat-image {
+                    transform: scale(1.04);
+                }
+
+                /* SECTION 4: EXPERIENCES */
+
+                .experience-card {
+                    min-height: 280px;
+                    background-size: cover;
+                    background-position: center;
+                    position: relative;
+                    display: flex;
+                    align-items: end;
+                    overflow: hidden;
+                }
+
+                .experience-card::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(transparent,
+                            rgba(10, 54, 51, .90));
+                    transition: .3s ease;
+                }
+
+                .experience-card:hover::before {
+                    background: linear-gradient(transparent,
+                            rgba(10, 54, 51, .97));
+                }
+
+                .experience-content {
+                    position: relative;
+                    z-index: 1;
+                    padding: 25px;
+                    color: white;
+                }
+
+                /* SECTION 5: DESTINATIONS */
+
+                .destination-item {
+                    position: relative;
+                    min-height: 350px;
+                    overflow: hidden;
+                }
+
+                .destination-item img {
+                    width: 100%;
+                    height: 350px;
+                    object-fit: cover;
+                    transition: transform .6s ease;
+                }
+
+                .destination-item:hover img {
+                    transform: scale(1.06);
+                }
+
+                .destination-overlay {
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(transparent 35%,
+                            rgba(10, 54, 51, .88));
+                    display: flex;
+                    align-items: end;
+                    padding: 25px;
+                    color: white;
+                }
+
+                /* SECTION 6: PERSONALISE */
+
+                .gold-line {
+                    width: 55px;
+                    height: 2px;
+                    background: var(--gold);
+                }
+
+                /* SECTION 7: FINAL CTA */
+
+                .story-panel {
+                    background: var(--dark-teal);
+                    color: white;
+                }
+
+                @media (max-width: 640px) {
+                    .royal-hero {
+                        background-position: 58% center;
+                    }
+
+                    .retreat-image {
+                        height: 230px;
+                    }
+
+                    .destination-item,
+                    .destination-item img {
+                        min-height: 280px;
+                        height: 280px;
+                    }
+                }
+            </style>
+        </head>
+
+        <body>
+
+            <main class="royal-page">
+
+                <!-- SECTION 1: ROYAL HERO -->
+
+                <section class="royal-hero min-h-[590px] md:min-h-[680px] flex items-center">
+
+                    <div class="max-w-7xl mx-auto px-6 md:px-12 py-24 w-full">
+
+                        <div class="max-w-2xl">
+
+                            <h1 class="text-white text-4xl md:text-6xl leading-tight mb-7">
+                                Where Every Stay
+                                <span class="italic gold-text">
+                                    Tells a Royal Story.
+                                </span>
+                            </h1>
+
+                            <p class="text-white/80 text-base md:text-lg leading-8 max-w-xl mb-9">
+                                Discover extraordinary palace residences, timeless
+                                heritage hideaways and remarkable escapes crafted
+                                for those who appreciate the finer things in life.
+                            </p>
+
+                            <div class="flex flex-wrap gap-4">
+
+                                <a href="#retreats" class="royal-btn">
+                                    Explore Retreats
+                                </a>
+
+                                <a href="booking.html" class="outline-btn">
+                                    Plan Your Stay
+                                </a>
+
+                            </div>
+
+                            <div class="mt-16 pt-6 border-t border-white/25 grid grid-cols-3 gap-5 max-w-lg">
+
+                                <div>
+                                    <h3 class="text-2xl text-white">01</h3>
+                                    <p class="text-xs text-white/65 mt-2">
+                                        Timeless Luxury
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h3 class="text-2xl text-white">02</h3>
+                                    <p class="text-xs text-white/65 mt-2">
+                                        Personalised Stays
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h3 class="text-2xl text-white">03</h3>
+                                    <p class="text-xs text-white/65 mt-2">
+                                        Rare Experiences
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION 2: THE ART OF ROYAL LIVING -->
+
+                <section class="py-20 md:py-28 px-6">
+
+                    <div class="max-w-5xl mx-auto text-center">
+
+                        <p class="section-label mb-5">
+                            The Art of Royal Living
+                        </p>
+
+                        <h2 class="text-3xl md:text-5xl leading-tight mb-7">
+                            Luxury is not simply where you stay.
+                            <span class="italic text-[#0F766E]">
+                                It is how you feel.
+                            </span>
+                        </h2>
+
+                        <div class="gold-line mx-auto mb-7"></div>
+
+                        <p class="text-gray-600 leading-8 max-w-3xl mx-auto">
+                            Step into a world where grand architecture meets thoughtful
+                            hospitality. From beautifully restored heritage residences
+                            to secluded estates, every retreat is chosen for its
+                            character, comfort and unforgettable sense of place.
+                        </p>
+
+                        <div class="grid sm:grid-cols-3 gap-9 mt-16 text-left">
+
+                            <div class="border-t border-[#C6A66A] pt-6">
+
+                                <span class="text-3xl text-[#0F766E]">✧</span>
+
+                                <h3 class="text-xl mt-4 mb-3">
+                                    Timeless Architecture
+                                </h3>
+
+                                <p class="text-sm text-gray-600 leading-7">
+                                    Distinctive spaces filled with heritage,
+                                    craftsmanship and remarkable detail.
+                                </p>
+
+                            </div>
+
+                            <div class="border-t border-[#C6A66A] pt-6">
+
+                                <span class="text-3xl text-[#0F766E]">✧</span>
+
+                                <h3 class="text-xl mt-4 mb-3">
+                                    Thoughtful Hospitality
+                                </h3>
+
+                                <p class="text-sm text-gray-600 leading-7">
+                                    Personal touches and attentive service
+                                    that make every moment feel special.
+                                </p>
+
+                            </div>
+
+                            <div class="border-t border-[#C6A66A] pt-6">
+
+                                <span class="text-3xl text-[#0F766E]">✧</span>
+
+                                <h3 class="text-xl mt-4 mb-3">
+                                    Exceptional Privacy
+                                </h3>
+
+                                <p class="text-sm text-gray-600 leading-7">
+                                    Peaceful surroundings designed for
+                                    unhurried, meaningful escapes.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION 3: SIGNATURE RETREATS -->
+
+                <section id="retreats" class="py-20 md:py-24 px-6 bg-[#EAF4F2]">
+
+                    <div class="max-w-7xl mx-auto">
+
+                        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-12">
+
+                            <div>
+                                <p class="section-label mb-4">
+                                    A Collection of Distinction
+                                </p>
+
+                                <h2 class="text-4xl md:text-5xl">
+                                    Signature Retreats
+                                </h2>
+                            </div>
+
+                            <p class="text-gray-600 leading-7 max-w-md">
+                                Discover a stay that matches your idea of extraordinary,
+                                from regal suites to secluded private residences.
+                            </p>
+
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-7">
+
+                            <!-- RETREAT 1 -->
+
+                            <article class="retreat-card">
+
+                                <div class="image-wrap">
+
+                                    <img class="retreat-image"
+                                        src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=80"
+                                        alt="Elegant luxury private villa" loading="lazy">
+
+                                    <span
+                                        class="absolute top-4 left-4 bg-white/95 px-4 py-2 text-[10px] tracking-widest uppercase">
+                                        Signature Stay
+                                    </span>
+
+                                </div>
+
+                                <div class="p-6">
+
+                                    <p class="section-label">
+                                        Private Estates
+                                    </p>
+
+                                    <h3 class="text-2xl mt-3 mb-3">
+                                        The Grand Estate
+                                    </h3>
+
+                                    <p class="text-sm text-gray-600 leading-7 mb-6">
+                                        Spacious private living, elegant interiors
+                                        and serene surroundings for a truly
+                                        personal escape.
+                                    </p>
+
+                                    <div class="flex items-center justify-between border-t border-gray-200 pt-5">
+
+                                        <div>
+                                            <p class="text-xs text-gray-500">
+                                                Illustrative rate
+                                            </p>
+
+                                            <p class="text-xl font-semibold">
+                                                $850
+                                                <span class="text-xs font-normal">
+                                                    / night
+                                                </span>
+                                            </p>
+                                        </div>
+
+                                        <a href="booking.html"
+                                            class="text-xs font-bold text-[#0F766E] border-b border-[#C6A66A] pb-1">
+                                            DISCOVER →
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- RETREAT 2 -->
+
+                            <article class="retreat-card">
+
+                                <div class="image-wrap">
+
+                                    <img class="retreat-image"
+                                        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80"
+                                        alt="Sophisticated luxury suite interior" loading="lazy">
+
+                                    <span
+                                        class="absolute top-4 left-4 bg-white/95 px-4 py-2 text-[10px] tracking-widest uppercase">
+                                        Heritage Charm
+                                    </span>
+
+                                </div>
+
+                                <div class="p-6">
+
+                                    <p class="section-label">
+                                        Heritage Residences
+                                    </p>
+
+                                    <h3 class="text-2xl mt-3 mb-3">
+                                        The Royal Residence
+                                    </h3>
+
+                                    <p class="text-sm text-gray-600 leading-7 mb-6">
+                                        A graceful blend of classic character,
+                                        refined comfort and an atmosphere of
+                                        old-world elegance.
+                                    </p>
+
+                                    <div class="flex items-center justify-between border-t border-gray-200 pt-5">
+
+                                        <div>
+                                            <p class="text-xs text-gray-500">
+                                                Illustrative rate
+                                            </p>
+
+                                            <p class="text-xl font-semibold">
+                                                $620
+                                                <span class="text-xs font-normal">
+                                                    / night
+                                                </span>
+                                            </p>
+                                        </div>
+
+                                        <a href="booking.html"
+                                            class="text-xs font-bold text-[#0F766E] border-b border-[#C6A66A] pb-1">
+                                            DISCOVER →
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- RETREAT 3 -->
+
+                            <article class="retreat-card">
+
+                                <div class="image-wrap">
+
+                                    <img class="retreat-image"
+                                        src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80"
+                                        alt="Luxury resort pool surrounded by gardens" loading="lazy">
+
+                                    <span
+                                        class="absolute top-4 left-4 bg-white/95 px-4 py-2 text-[10px] tracking-widest uppercase">
+                                        Secluded Escape
+                                    </span>
+
+                                </div>
+
+                                <div class="p-6">
+
+                                    <p class="section-label">
+                                        Private Hideaways
+                                    </p>
+
+                                    <h3 class="text-2xl mt-3 mb-3">
+                                        The Serene Sanctuary
+                                    </h3>
+
+                                    <p class="text-sm text-gray-600 leading-7 mb-6">
+                                        Unwind amid peaceful gardens, beautiful
+                                        landscapes and the freedom to enjoy
+                                        life at your own pace.
+                                    </p>
+
+                                    <div class="flex items-center justify-between border-t border-gray-200 pt-5">
+
+                                        <div>
+                                            <p class="text-xs text-gray-500">
+                                                Illustrative rate
+                                            </p>
+
+                                            <p class="text-xl font-semibold">
+                                                $490
+                                                <span class="text-xs font-normal">
+                                                    / night
+                                                </span>
+                                            </p>
+                                        </div>
+
+                                        <a href="booking.html"
+                                            class="text-xs font-bold text-[#0F766E] border-b border-[#C6A66A] pb-1">
+                                            DISCOVER →
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                        <p class="text-xs text-gray-500 mt-6">
+                            Displayed prices are illustrative sample rates, not verified live hotel prices.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION 4: EXPERIENCES -->
+
+                <section class="py-20 md:py-24 px-6">
+
+                    <div class="max-w-7xl mx-auto">
+
+                        <div class="text-center max-w-2xl mx-auto mb-12">
+
+                            <p class="section-label mb-4">
+                                More Than a Stay
+                            </p>
+
+                            <h2 class="text-4xl md:text-5xl mb-5">
+                                Experiences Beyond Ordinary
+                            </h2>
+
+                            <p class="text-gray-600 leading-7">
+                                Make every moment part of the memory with experiences
+                                inspired by comfort, culture and indulgence.
+                            </p>
+
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+                            <article class="experience-card"
+                                style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80')">
+
+                                <div class="experience-content">
+
+                                    <p class="gold-text text-xs uppercase tracking-widest mb-3">
+                                        01 / Culinary
+                                    </p>
+
+                                    <h3 class="text-2xl mb-2">
+                                        Dining in Style
+                                    </h3>
+
+                                    <p class="text-sm text-white/75 leading-6">
+                                        Discover memorable meals in extraordinary settings.
+                                    </p>
+
+                                </div>
+
+                            </article>
+
+
+                            <article class="experience-card"
+                                style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=700&q=80')">
+
+                                <div class="experience-content">
+
+                                    <p class="gold-text text-xs uppercase tracking-widest mb-3">
+                                        02 / Wellness
+                                    </p>
+
+                                    <h3 class="text-2xl mb-2">
+                                        Rest & Renew
+                                    </h3>
+
+                                    <p class="text-sm text-white/75 leading-6">
+                                        Slow down with peaceful wellness-inspired escapes.
+                                    </p>
+
+                                </div>
+
+                            </article>
+
+
+                            <article class="experience-card"
+                                style="background-image:url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=700&q=80')">
+
+                                <div class="experience-content">
+
+                                    <p class="gold-text text-xs uppercase tracking-widest mb-3">
+                                        03 / Discovery
+                                    </p>
+
+                                    <h3 class="text-2xl mb-2">
+                                        Private Discoveries
+                                    </h3>
+
+                                    <p class="text-sm text-white/75 leading-6">
+                                        Explore local stories, landmarks and hidden gems.
+                                    </p>
+
+                                </div>
+
+                            </article>
+
+
+                            <article class="experience-card"
+                                style="background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=80')">
+
+                                <div class="experience-content">
+
+                                    <p class="gold-text text-xs uppercase tracking-widest mb-3">
+                                        04 / Celebration
+                                    </p>
+
+                                    <h3 class="text-2xl mb-2">
+                                        Moments to Cherish
+                                    </h3>
+
+                                    <p class="text-sm text-white/75 leading-6">
+                                        Celebrate anniversaries and special occasions in style.
+                                    </p>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION 5: DESTINATIONS -->
+
+                <section class="py-20 md:py-24 px-6 bg-[#134E4A] text-white">
+
+                    <div class="max-w-7xl mx-auto">
+
+                        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-12">
+
+                            <div>
+
+                                <p class="gold-text text-xs uppercase tracking-[3px] mb-4">
+                                    A World of Elegance
+                                </p>
+
+                                <h2 class="text-4xl md:text-5xl">
+                                    Destinations of Distinction
+                                </h2>
+
+                            </div>
+
+                            <p class="text-white/65 leading-7 max-w-md">
+                                From regal Indian cities to romantic European countryside,
+                                find a destination that feels uniquely yours.
+                            </p>
+
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+
+                            <!-- PARIS, FRANCE -->
+
+                            <article class="destination-item">
+
+                                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80"
+                                    alt="Eiffel Tower and Paris cityscape in France" loading="lazy">
+
+                                <div class="destination-overlay">
+
+                                    <div>
+                                        <p class="gold-text text-xs tracking-widest uppercase mb-2">
+                                            France
+                                        </p>
+
+                                        <h3 class="text-3xl mb-2">
+                                            Paris
+                                        </h3>
+
+                                        <p class="text-sm text-white/75">
+                                            Timeless European elegance
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- DUBAI, UAE -->
+
+                            <article class="destination-item">
+
+                                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"
+                                    alt="Dubai skyline with modern luxury architecture" loading="lazy">
+
+                                <div class="destination-overlay">
+
+                                    <div>
+                                        <p class="gold-text text-xs tracking-widest uppercase mb-2">
+                                            United Arab Emirates
+                                        </p>
+
+                                        <h3 class="text-3xl mb-2">
+                                            Dubai
+                                        </h3>
+
+                                        <p class="text-sm text-white/75">
+                                            Modern luxury and grandeur
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- MARRAKECH -->
+
+                            <article class="destination-item">
+
+                                <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=800&q=80"
+                                    alt="Traditional Moroccan architecture" loading="lazy">
+
+                                <div class="destination-overlay">
+
+                                    <div>
+                                        <p class="gold-text text-xs tracking-widest uppercase mb-2">
+                                            Morocco
+                                        </p>
+
+                                        <h3 class="text-3xl mb-2">
+                                            Marrakech
+                                        </h3>
+
+                                        <p class="text-sm text-white/75">
+                                            Artistry and atmosphere
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- TUSCANY -->
+
+                            <article class="destination-item">
+
+                                <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80"
+                                    alt="Picturesque Italian countryside" loading="lazy">
+
+                                <div class="destination-overlay">
+
+                                    <div>
+                                        <p class="gold-text text-xs tracking-widest uppercase mb-2">
+                                            Italy
+                                        </p>
+
+                                        <h3 class="text-3xl mb-2">
+                                            Tuscany
+                                        </h3>
+
+                                        <p class="text-sm text-white/75">
+                                            Countryside romance
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION 6: PERSONALISE YOUR STAY -->
+
+                <section class="py-20 md:py-28 px-6">
+
+                    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+                        <div class="grid grid-cols-2 gap-4">
+
+                            <img class="w-full h-64 md:h-80 object-cover mt-8"
+                                src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=700&q=80"
+                                alt="Elegant hotel bedroom" loading="lazy">
+
+                            <img class="w-full h-64 md:h-80 object-cover"
+                                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80"
+                                alt="Beautiful luxury residence interior" loading="lazy">
+
+                        </div>
+
+                        <div class="lg:pl-8">
+
+                            <p class="section-label mb-5">
+                                Made Around You
+                            </p>
+
+                            <h2 class="text-4xl md:text-5xl leading-tight mb-6">
+                                Your Stay.
+                                <span class="italic text-[#0F766E]">
+                                    Your Story.
+                                </span>
+                            </h2>
+
+                            <p class="text-gray-600 leading-8 mb-8">
+                                No two journeys are alike. Whether you are planning
+                                a romantic escape, a memorable family celebration
+                                or a peaceful break from everyday life, let your
+                                preferences shape your royal retreat.
+                            </p>
+
+                            <div class="space-y-5 mb-9">
+
+                                <div class="flex gap-4">
+
+                                    <span class="text-[#0F766E] text-xl">✦</span>
+
+                                    <div>
+                                        <h3 class="text-lg mb-1">
+                                            Romantic Escapes
+                                        </h3>
+
+                                        <p class="text-sm text-gray-600 leading-6">
+                                            Intimate settings for meaningful moments together.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div class="flex gap-4">
+
+                                    <span class="text-[#0F766E] text-xl">✦</span>
+
+                                    <div>
+                                        <h3 class="text-lg mb-1">
+                                            Family Celebrations
+                                        </h3>
+
+                                        <p class="text-sm text-gray-600 leading-6">
+                                            Thoughtful spaces for gathering and making memories.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div class="flex gap-4">
+
+                                    <span class="text-[#0F766E] text-xl">✦</span>
+
+                                    <div>
+                                        <h3 class="text-lg mb-1">
+                                            Quiet Rejuvenation
+                                        </h3>
+
+                                        <p class="text-sm text-gray-600 leading-6">
+                                            Relaxed retreats where you can pause and recharge.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <a href="booking.html" class="royal-btn">
+                                Personalise Your Retreat
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION 7: FINAL CALL TO ACTION -->
+
+                <section class="story-panel relative overflow-hidden">
+
+                    <div class="absolute inset-0 opacity-20"
+                        style="background-image:url('https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1800&q=80'); background-size:cover; background-position:center;">
+                    </div>
+
+                    <div class="relative max-w-4xl mx-auto text-center px-6 py-24 md:py-32">
+
+                        <p class="gold-text text-xs tracking-[4px] uppercase mb-6">
+                            Your Extraordinary Escape Awaits
+                        </p>
+
+                        <h2 class="text-4xl md:text-6xl leading-tight mb-7">
+                            Step Into Your
+                            <span class="italic gold-text">
+                                Own Royal Chapter.
+                            </span>
+                        </h2>
+
+                        <p class="text-white/75 leading-8 max-w-2xl mx-auto mb-10">
+                            Let the journey begin with a stay that is every bit
+                            as exceptional as the memories you will take home.
+                        </p>
+
+                        <a href="booking.html" class="royal-btn">
+                            Book Your Royal Retreat
+                        </a>
+
+                        <p class="text-white/50 text-xs tracking-widest mt-8">
+                            DISCOVER MORE · EXPERIENCE MORE · TRAVEL DIFFERENTLY
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </body>
+
+        </html>
+        ```
+
+        <!-- Footer -->
+        <footer class="bg-black">
+
+            <div class=" mx-auto px-5 py-5">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-10">
+                    <!-- Logo -->
+                    <div>
+                        <img src="image/zestlogoo.png" class="w-40 mb-4">
+                        <p class="text-gray-300 leading-7 text-sm">
+                            Explore more. Live more.
+                            Let us take you to the most beautiful
+                            places on Earth.
+                        </p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Quick Links</h3>
+
+                        <ul class="space-y-3 text-gray-300">
+                            <li><a href="index.html" class="hover:text-teal-600">Home</a></li>
+                            <li><a href="#" class="hover:text-teal-600">About Us</a></li>
+                            <li><a href="destination.html" class="hover:text-teal-600">Destinations</a></li>
+                            <li><a href="#" class="hover:text-teal-600">Packages</a></li>
+                            <li><a href="#" class="hover:text-teal-600">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Top Destinations -->
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Top Destinations</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>Bali</li>
+                            <li>Canada</li>
+                            <li>Mexico</li>
+                            <li>Maldives</li>
+                            <li>Switzerland</li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Support</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li>FAQs</li>
+                            <li>Privacy Policy</li>
+                            <li>Terms & Conditions</li>
+                            <li>Refund Policy</li>
+                            <li>Travel Insurance</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h3 class="text-xl text-teal-700 font-bold mb-5">Contact Us</h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex gap-3">
+                                📞
+                                <span>+91 87787 38692</span>
+                            </li>
+                            <li class="flex gap-3">
+                                📧
+                                <span>info@zestaexplorer.com</span>
+                            </li>
+                            <li class="flex gap-3">
+                                📍
+                                <span>123, Travel Street,<br>Chennai - 600001</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm">
+                    © 2026 Zesta Explorer. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+</body>
+
+</html>
